@@ -80,7 +80,7 @@ export default function Home() {
                 </svg>
               </Link>
               <a
-                href="https://wa.me/YOUR_PHONE_NUMBER"
+                href="https://wa.me/972525628235"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn glass-dark text-white border-2 border-white/20 hover:border-white/40 text-lg px-10 py-5"

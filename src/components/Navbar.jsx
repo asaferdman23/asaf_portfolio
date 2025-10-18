@@ -67,17 +67,17 @@ export default function Navbar() {
                 <div key={link.path} className="relative">
                   <Link
                     to={link.path}
-                    className="px-4 py-2 text-slate-700 hover:text-white transition-all duration-300 font-medium relative group rounded-lg overflow-hidden"
+                    className="px-6 py-3 text-slate-700 hover:text-white transition-all duration-300 font-medium relative group rounded-full overflow-hidden"
                   >
                     <span className="relative z-10">{link.label}</span>
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"
                       initial={false}
                     />
                     {location.pathname === link.path && (
                       <motion.div
                         layoutId="activeTab"
-                        className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg"
+                        className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
                         initial={false}
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       />
