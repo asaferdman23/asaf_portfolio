@@ -31,6 +31,12 @@ export default function ProjectCard({ project }) {
               <span className="text-slate-600 font-medium">{project.title}</span>
             </div>
             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            {project.isLive && (
+              <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
+                <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                LIVE
+              </div>
+            )}
           </div>
 
           <div className="p-6">

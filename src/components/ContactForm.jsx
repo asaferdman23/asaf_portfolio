@@ -22,7 +22,7 @@ export default function ContactForm() {
     setStatus('submitting');
 
     try {
-      const response = await fetch('https://formsubmit.co/your@email.com', {
+      const response = await fetch('https://formsubmit.co/hello@erdmmind.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ export default function ContactForm() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          _honey: '', // honeypot field
+          _honey: '',
           _captcha: 'false',
           _template: 'table'
         }),

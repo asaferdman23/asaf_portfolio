@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import Hero from '../components/Hero';
+import HeroPremium from '../components/HeroPremium';
 import About from '../components/About';
-import Skills from '../components/Skills';
+import Stats from '../components/Stats';
+import ServicesPremium from '../components/ServicesPremium';
 import ProjectsGrid from '../components/ProjectsGrid';
-import Testimonials from '../components/Testimonials';
 import Section from '../components/Section';
 import PageTransition from '../components/PageTransition';
 import { projects } from '../data/projects';
@@ -13,47 +13,87 @@ import { hoverScale } from '../lib/motion';
 export default function Home() {
   return (
     <PageTransition>
-      <Hero />
-      <About />
-      <Skills />
+      <HeroPremium />
+      <ServicesPremium />
+      <Stats />
 
       <Section
-        id="projects"
-        title="Featured Projects"
-        subtitle="A selection of my recent work and personal projects"
-        className="bg-slate-100"
+        id="case-studies"
+        title="Case Studies"
+        subtitle="Real projects. Real results. Real impact."
+        className="bg-gradient-premium"
       >
-        <ProjectsGrid projects={projects} />
+        <ProjectsGrid projects={projects.slice(0, 3)} />
         <div className="text-center mt-12">
           <motion.div {...hoverScale}>
             <Link to="/projects" className="btn btn-primary">
-              View All Projects
+              View All Case Studies
             </Link>
           </motion.div>
         </div>
       </Section>
 
-      <Testimonials />
+      {/* Final CTA */}
+      <section className="relative py-32 bg-gradient-dark text-white overflow-hidden">
+        {/* Animated background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-slate-600/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        </div>
 
-      <Section
-        title="Let's build something great"
-        subtitle="Have a project in mind? I'm available for freelance work."
-        className="bg-slate-900 text-white"
-        containerClassName="text-center"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <motion.div {...hoverScale}>
-            <Link to="/contact" className="btn btn-primary">
-              Get in touch
-            </Link>
+        <div className="container-custom relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+              Ready to Build<br />Something Amazing?
+            </h2>
+
+            <p className="text-xl md:text-2xl text-slate-300 mb-12 font-light">
+              Join forward-thinking companies that trust ErdmMind to deliver exceptional digital products.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="glass-dark p-8 rounded-3xl">
+                <div className="text-5xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Free</div>
+                <div className="text-slate-300 font-medium">Consultation Call</div>
+              </div>
+              <div className="glass-dark p-8 rounded-3xl">
+                <div className="text-5xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">24h</div>
+                <div className="text-slate-300 font-medium">Response Time</div>
+              </div>
+              <div className="glass-dark p-8 rounded-3xl">
+                <div className="text-5xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">4-8w</div>
+                <div className="text-slate-300 font-medium">Average Delivery</div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="btn bg-white text-slate-900 hover:bg-slate-100 text-lg px-10 py-5 shadow-2xl">
+                Start Your Project
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <a
+                href="https://wa.me/YOUR_PHONE_NUMBER"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn glass-dark text-white border-2 border-white/20 hover:border-white/40 text-lg px-10 py-5"
+              >
+                <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                WhatsApp
+              </a>
+            </div>
           </motion.div>
-        </motion.div>
-      </Section>
+        </div>
+      </section>
     </PageTransition>
   );
 }

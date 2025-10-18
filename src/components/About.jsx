@@ -24,8 +24,8 @@ export default function About() {
 
   return (
     <Section
-      title="About Me"
-      subtitle="Passionate about creating meaningful digital experiences"
+      title="About ErdmMind"
+      subtitle="Building the next generation of web applications and AI-powered solutions"
     >
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <motion.div
@@ -37,9 +37,13 @@ export default function About() {
         >
           <div className="card p-8">
             <p className="text-lg mb-6 leading-relaxed">
-              I'm a full-stack developer with 4+ years of experience across React, Node.js, and
-              system-level Android (Java/Kotlin). I love shipping delightful UIs, scalable APIs,
-              and AI-powered tools that solve real problems.
+              <span className="font-bold text-blue-600">ErdmMind is a full-stack development company.</span> With 4+ years of experience across high-growth startups and complex system architectures, we specialize in building scalable platforms that perform under pressure.
+            </p>
+            <p className="text-lg mb-6 leading-relaxed">
+              We currently maintain live production platforms including <span className="font-semibold">eliteteamacademy.com</span> and an <span className="font-semibold">AI-powered fitness coaching application</span> serving real users. Our approach combines rapid execution with robust engineering practices—delivering solutions that scale from MVP to enterprise.
+            </p>
+            <p className="text-lg mb-6 leading-relaxed">
+              From React-based SPAs to Node.js microservices, AI integrations to cloud infrastructure—ErdmMind builds complete systems that drive business results. We deliver senior-level engineering expertise with the speed and focus of a dedicated development partner.
             </p>
 
             <motion.div
@@ -74,8 +78,12 @@ export default function About() {
         >
           <div className="relative">
             <div className="w-80 h-80 bg-gradient-to-br from-blue-100 to-slate-200 rounded-2xl flex items-center justify-center">
-              <div className="w-64 h-64 bg-slate-300 rounded-xl flex items-center justify-center">
-                <span className="text-slate-600 text-lg font-medium">Profile Image</span>
+              <div className="w-64 h-64 rounded-xl overflow-hidden">
+                <img 
+                  src="/assets/IMG_1553.jpeg" 
+                  alt="Profile" 
+                  className="w-full h-full object-cover object-[center_top]"
+                />
               </div>
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center">

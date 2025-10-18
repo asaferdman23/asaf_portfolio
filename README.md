@@ -1,4 +1,4 @@
-# Asaf Erdman - Portfolio Website
+# ErdmMind - Website
 
 A modern, responsive portfolio website built with React, Vite, and Framer Motion. Features smooth animations, clean design, and optimized performance.
 
@@ -197,4 +197,4 @@ Feel free to fork this project and customize it for your own portfolio. If you f
 
 ---
 
-Built with ❤️ by Asaf Erdman
+Built by ErdmMind

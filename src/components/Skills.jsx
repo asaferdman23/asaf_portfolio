@@ -34,8 +34,8 @@ export default function Skills() {
 
   return (
     <Section
-      title="Skills & Technologies"
-      subtitle="The tools and technologies I use to build amazing products"
+      title="Technical Stack"
+      subtitle="Modern technologies and frameworks for scalable, high-performance applications"
     >
       <motion.div
         variants={staggerContainer}

@@ -1,5 +1,31 @@
 export const projects = [
   {
+    slug: "elite-team-academy",
+    title: "Elite Team Academy",
+    year: 2025,
+    tags: ["React", "Next.js", "Sports Tech", "Live"],
+    excerpt: "LIVE sports training platform for elite athletes - deployed and operational.",
+    description: "A production sports training platform currently serving real athletes. Built for performance, scalability, and user engagement, Elite Team Academy delivers comprehensive training programs, progress tracking, and community features.\n\nThis isn't a demo—it's a live platform helping athletes level up their game with structured training plans, video analysis, and performance metrics. Built with modern web technologies for speed and reliability.\n\nKey features include real-time progress tracking, personalized workout plans, coach-athlete communication, and mobile-responsive design for training on any device.",
+    cover: "https://res.cloudinary.com/ddg685nfx/image/upload/v1760816073/elite_team_preview_oeu4jh.png",
+    gallery: ["https://res.cloudinary.com/ddg685nfx/image/upload/v1760816073/elite_team_preview_oeu4jh.png", "https://res.cloudinary.com/ddg685nfx/image/upload/v1760816073/elite_team_preview_oeu4jh.png"],
+    github: null,
+    demo: "https://eliteteamacademy.com",
+    isLive: true
+  },
+  {
+    slug: "ai-fitness-coach",
+    title: "Coach-A: AI Fitness Coach",
+    year: 2025,
+    tags: ["React", "AI", "OpenAI", "Fitness", "Live"],
+    excerpt: "LIVE AI-powered personal fitness coach - automated workout plans and nutrition guidance.",
+    description: "An intelligent, AI-powered fitness coach that's live and transforming how athletes train. Using advanced AI models, Coach-A provides personalized workout plans, nutrition guidance, form analysis, and adaptive training programs.\n\nThis production app analyzes user fitness levels, goals, and progress to create dynamic training plans that evolve with the athlete. Real-time feedback, exercise demonstrations, and recovery tracking ensure optimal results.\n\nBuilt with cutting-edge AI technology for natural conversations, smart recommendations, and data-driven insights. Users get a 24/7 personal trainer powered by AI that understands their unique needs.",
+    cover: "/assets/coach-a-cover.jpg",
+    gallery: ["/assets/coach-a-1.jpg", "/assets/coach-a-2.jpg", "/assets/coach-a-3.jpg"],
+    github: null,
+    demo: "https://coach-a-ai-fit.lovable.app/",
+    isLive: true
+  },
+  {
     slug: "postmate-gmail-clone",
     title: "PostMate – Gmail-style Client",
     year: 2025,

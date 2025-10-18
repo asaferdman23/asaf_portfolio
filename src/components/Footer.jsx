@@ -14,15 +14,18 @@ export default function Footer() {
           className="text-center"
         >
           <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">Asaf Erdman</h3>
+            <h3 className="text-3xl font-bold mb-2">ErdmMind</h3>
+            <p className="text-slate-500 text-sm mb-4">
+              Professional Development Company
+            </p>
             <p className="text-slate-400 max-w-md mx-auto">
-              Full-Stack Developer & AI Innovator building the future, one line of code at a time.
+              Full-stack development company delivering enterprise-grade solutions with startup velocity.
             </p>
           </div>
 
           <div className="flex justify-center space-x-8 mb-8">
             <a
-              href="https://github.com"
+              href="https://github.com/asaferdman"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-white transition-colors"
@@ -33,7 +36,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/asaferdman"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-white transition-colors"
@@ -44,7 +47,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="mailto:hello@asaferdman.com"
+              href="mailto:asaf.erdman.dev@gmail.com"
               className="text-slate-400 hover:text-white transition-colors"
               aria-label="Email"
             >
@@ -56,7 +59,7 @@ export default function Footer() {
 
           <div className="border-t border-slate-800 pt-8">
             <p className="text-slate-400 text-sm">
-              © {currentYear} Asaf Erdman. All rights reserved.
+              © {currentYear} ErdmMind - All rights reserved.
             </p>
           </div>
         </motion.div>

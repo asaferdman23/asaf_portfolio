@@ -17,8 +17,9 @@ export default function Navbar() {
 
   const navLinks = [
     { path: '/', label: 'Home' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/services', label: 'Services' },
+    { path: '/projects', label: 'Case Studies' },
+    { path: '/contact', label: 'Get Started' },
   ];
 
   return (
@@ -37,7 +38,7 @@ export default function Navbar() {
             to="/"
             className="font-bold text-xl text-slate-900 hover:text-blue-600 transition-colors"
           >
-            Asaf Erdman
+            ErdmMind
           </Link>
 
           <div className="flex items-center space-x-8">
