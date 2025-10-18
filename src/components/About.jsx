@@ -24,7 +24,7 @@ export default function About() {
 
   return (
     <Section
-      title="About ErdmMind"
+      title="About Erdmind"
       subtitle="Building the next generation of web applications and AI-powered solutions"
     >
       <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -37,13 +37,13 @@ export default function About() {
         >
           <div className="card p-8">
             <p className="text-lg mb-6 leading-relaxed">
-              <span className="font-bold text-blue-600">ErdmMind is a full-stack development company.</span> With 4+ years of experience across high-growth startups and complex system architectures, we specialize in building scalable platforms that perform under pressure.
+              <span className="font-bold text-blue-600">Erdmind is a full-stack development company.</span> With 4+ years of experience across high-growth startups and complex system architectures, we specialize in building scalable platforms that perform under pressure.
             </p>
             <p className="text-lg mb-6 leading-relaxed">
               We currently maintain live production platforms including <span className="font-semibold">eliteteamacademy.com</span> and an <span className="font-semibold">AI-powered fitness coaching application</span> serving real users. Our approach combines rapid execution with robust engineering practices—delivering solutions that scale from MVP to enterprise.
             </p>
             <p className="text-lg mb-6 leading-relaxed">
-              From React-based SPAs to Node.js microservices, AI integrations to cloud infrastructure—ErdmMind builds complete systems that drive business results. We deliver senior-level engineering expertise with the speed and focus of a dedicated development partner.
+              From React-based SPAs to Node.js microservices, AI integrations to cloud infrastructure—Erdmind builds complete systems that drive business results. We deliver senior-level engineering expertise with the speed and focus of a dedicated development partner.
             </p>
 
             <motion.div

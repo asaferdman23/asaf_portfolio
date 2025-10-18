@@ -54,7 +54,7 @@ export default function Home() {
             </h2>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-12 font-light">
-              Join forward-thinking companies that trust ErdmMind to deliver exceptional digital products.
+              Join forward-thinking companies that trust Erdmind to deliver exceptional digital products.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

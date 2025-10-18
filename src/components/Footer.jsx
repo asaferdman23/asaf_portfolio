@@ -14,7 +14,7 @@ export default function Footer() {
           className="text-center"
         >
           <div className="mb-8">
-            <h3 className="text-3xl font-bold mb-2">ErdmMind</h3>
+            <h3 className="text-3xl font-bold mb-2">Erdmind</h3>
             <p className="text-slate-500 text-sm mb-4">
               Professional Development Company
             </p>
@@ -59,7 +59,7 @@ export default function Footer() {
 
           <div className="border-t border-slate-800 pt-8">
             <p className="text-slate-400 text-sm">
-              © {currentYear} ErdmMind - All rights reserved.
+              © {currentYear} Erdmind - All rights reserved.
             </p>
           </div>
         </motion.div>

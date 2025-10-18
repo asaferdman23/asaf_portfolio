@@ -22,7 +22,7 @@ export default function ContactForm() {
     setStatus('submitting');
 
     try {
-      const response = await fetch('https://formsubmit.co/hello@erdmmind.com', {
+      const response = await fetch('https://formsubmit.co/asaf.erdman.dev@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
