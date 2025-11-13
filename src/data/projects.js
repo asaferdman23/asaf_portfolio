@@ -4,8 +4,8 @@ export const projects = [
     title: "Elite Team Academy",
     year: 2025,
     tags: ["React", "Next.js", "Sports Tech", "Live"],
-    excerpt: "LIVE sports training platform for elite athletes - deployed and operational.",
-    description: "A production sports training platform currently serving real athletes. Built for performance, scalability, and user engagement, Elite Team Academy delivers comprehensive training programs, progress tracking, and community features.\n\nThis isn't a demo—it's a live platform helping athletes level up their game with structured training plans, video analysis, and performance metrics. Built with modern web technologies for speed and reliability.\n\nKey features include real-time progress tracking, personalized workout plans, coach-athlete communication, and mobile-responsive design for training on any device.",
+    excerpt: "LIVE sports training platform we built for elite athletes - deployed and serving real users.",
+    description: "A custom sports training platform we developed from scratch for our client. Built for performance, scalability, and user engagement, this platform delivers comprehensive training programs, progress tracking, and community features.\n\nOur development team created this live production system that's currently helping real athletes level up their game. We built custom features including structured training plans, video analysis, and performance metrics using modern web technologies.\n\nKey deliverables: real-time progress tracking system, personalized workout plan generator, coach-athlete communication module, and fully responsive design optimized for all devices.",
     cover: "https://res.cloudinary.com/ddg685nfx/image/upload/v1760816073/elite_team_preview_oeu4jh.png",
     gallery: ["https://res.cloudinary.com/ddg685nfx/image/upload/v1760816073/elite_team_preview_oeu4jh.png", "https://res.cloudinary.com/ddg685nfx/image/upload/v1760816073/elite_team_preview_oeu4jh.png"],
     github: null,
@@ -17,13 +17,24 @@ export const projects = [
     title: "Coach-A: AI Fitness Coach",
     year: 2025,
     tags: ["React", "AI", "OpenAI", "Fitness", "Live"],
-    excerpt: "LIVE AI-powered personal fitness coach - automated workout plans and nutrition guidance.",
-    description: "An intelligent, AI-powered fitness coach that's live and transforming how athletes train. Using advanced AI models, Coach-A provides personalized workout plans, nutrition guidance, form analysis, and adaptive training programs.\n\nThis production app analyzes user fitness levels, goals, and progress to create dynamic training plans that evolve with the athlete. Real-time feedback, exercise demonstrations, and recovery tracking ensure optimal results.\n\nBuilt with cutting-edge AI technology for natural conversations, smart recommendations, and data-driven insights. Users get a 24/7 personal trainer powered by AI that understands their unique needs.",
-    cover: "/assets/coach-a-cover.jpg",
-    gallery: ["/assets/coach-a-1.jpg", "/assets/coach-a-2.jpg", "/assets/coach-a-3.jpg"],
+    excerpt: "LIVE AI-powered fitness coach we developed - custom workout automation and nutrition guidance.",
+    description: "We built this intelligent AI-powered fitness coach from the ground up for our client. Our team integrated advanced AI models to deliver personalized workout plans, nutrition guidance, form analysis, and adaptive training programs.\n\nThis custom production application we developed analyzes user fitness levels, goals, and progress to create dynamic training plans. We implemented real-time feedback systems, exercise demonstration modules, and recovery tracking features.\n\nOur developers utilized cutting-edge AI technology to create natural conversation flows, smart recommendation engines, and data-driven insight dashboards. The result: a 24/7 personal trainer that understands each user's unique needs.",
+    cover: "/assets/588BDF96-4A69-4EEA-A48F-BDA57EAC6D03.png",
+    gallery: ["/assets/coach_a_screenshot1.png", "/assets/coach_a_screenshot2.png"],
     github: null,
     demo: "https://coach-a-ai-fit.lovable.app/",
     isLive: true
+  },
+  {
+    slug: "sport-style",
+    title: "SportStyleAA",
+    year: 2025,
+    tags: ["React", "Node.js", "MongoDB", "Express"],
+    excerpt: "Sports apparel store we built for our client.",
+    description: "A comprehensive sports apparel store built with React and Vite. The application features a modern, responsive design with a focus on user experience. The store includes a product catalog, shopping cart, and checkout process. The application is built with a robust Node.js backend and MongoDB database, the platform handles sensitive information with enterprise-level security. Features include real-time messaging, document upload and verification, case status tracking, and automated notifications.\n\nThe frontend provides separate interfaces for professionals and families, with role-based access control and customizable dashboards. Advanced search and filtering capabilities help match families with appropriate service providers based on location, specialization, and availability.",
+    cover: "/assets/sport_style.png",
+    gallery: ["/assets/sport_style.png"],
+    demo: "https://sportstyleaa.com"
   },
   {
     slug: "postmate-gmail-clone",
@@ -36,18 +47,6 @@ export const projects = [
     gallery: ["/assets/postmate-1.jpg", "/assets/postmate-2.jpg", "/assets/postmate-3.jpg"],
     github: "https://github.com/asaferdman/postmate-gmail-clone",
     demo: "https://postmate-demo.vercel.app"
-  },
-  {
-    slug: "repatriation-hub",
-    title: "RepatriationHub",
-    year: 2024,
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    excerpt: "Platform connecting repatriation professionals and families.",
-    description: "A comprehensive platform designed to connect repatriation professionals with families in need of services. The application facilitates communication, document management, and process tracking for international repatriation cases.\n\nBuilt with a robust Node.js backend and MongoDB database, the platform handles sensitive information with enterprise-level security. Features include real-time messaging, document upload and verification, case status tracking, and automated notifications.\n\nThe frontend provides separate interfaces for professionals and families, with role-based access control and customizable dashboards. Advanced search and filtering capabilities help match families with appropriate service providers based on location, specialization, and availability.",
-    cover: "/assets/repatriation-cover.jpg",
-    gallery: ["/assets/repatriation-1.jpg", "/assets/repatriation-2.jpg"],
-    github: "https://github.com/asaferdman/repatriation-hub",
-    demo: "https://repatriation-hub.com"
   },
   {
     slug: "sports-analytics-bot",

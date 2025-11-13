@@ -61,24 +61,25 @@ export default function Hero() {
             variants={fadeInUp}
             className="text-lg md:text-xl text-slate-600 mb-6 font-medium"
           >
-            Professional Software Development Company
+            Custom Software Development Agency
           </motion.p>
 
           <motion.h2
             variants={fadeInUp}
             className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight"
           >
-            Full-Stack Development &{' '}
+            We Build{' '}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              AI Solutions
+              Custom Web & Mobile Apps
             </span>
+            {' '}For Your Business
           </motion.h2>
 
           <motion.p
             variants={fadeInUp}
             className="text-xl md:text-2xl text-slate-700 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
           >
-            We build production-grade web applications, mobile solutions, and AI integrations that scale your business. From MVP to enterprise, we deliver results fast.
+            Our development team creates tailored software solutions from scratch. Talk to real developers, get a custom solution built specifically for your needs.
           </motion.p>
 
           <motion.div
@@ -94,8 +95,8 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <span className="font-semibold text-lg text-slate-800">Rapid Delivery</span>
-              <p className="text-slate-600 text-center text-sm">Fast turnaround times without compromising quality</p>
+              <span className="font-semibold text-lg text-slate-800">Expert Developers</span>
+              <p className="text-slate-600 text-center text-sm">Dedicated team of senior engineers on your project</p>
             </motion.div>
             
             <motion.div 
@@ -107,8 +108,8 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <span className="font-semibold text-lg text-slate-800">Production Ready</span>
-              <p className="text-slate-600 text-center text-sm">Enterprise-grade solutions built for scale</p>
+              <span className="font-semibold text-lg text-slate-800">100% Custom Code</span>
+              <p className="text-slate-600 text-center text-sm">No templates. Every line tailored to your requirements</p>
             </motion.div>
             
             <motion.div 
@@ -120,8 +121,8 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
                 </svg>
               </div>
-              <span className="font-semibold text-lg text-slate-800">Scalable Architecture</span>
-              <p className="text-slate-600 text-center text-sm">Future-proof solutions that grow with your business</p>
+              <span className="font-semibold text-lg text-slate-800">Full Ownership</span>
+              <p className="text-slate-600 text-center text-sm">You own 100% of the code and infrastructure</p>
             </motion.div>
           </motion.div>
 
@@ -134,7 +135,7 @@ export default function Hero() {
                 to="/contact" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg px-10 py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
               >
-                Get Free Consultation
+                Talk to Our Team
               </Link>
             </motion.div>
 
@@ -150,11 +151,11 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full flex justify-center">
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="text-slate-400"
+          className="text-slate-400 flex flex-col items-center"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

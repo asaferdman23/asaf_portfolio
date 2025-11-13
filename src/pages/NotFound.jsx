@@ -26,23 +26,23 @@ export default function NotFound() {
             </div>
 
             <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Page Not Found
+              העמוד שחיפשת לא קיים
             </h1>
 
             <p className="text-lg text-slate-600 mb-8">
-              Sorry, the page you're looking for doesn't exist or has been moved.
+              ייתכן שהזנת כתובת שגויה או שהעמוד ירד מהאוויר. בואו נחזור לאזור הבטוח.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div {...hoverScale}>
                 <Link to="/" className="btn btn-primary">
-                  Go Home
+                  חזרה לדף הבית
                 </Link>
               </motion.div>
 
               <motion.div {...hoverScale}>
                 <Link to="/projects" className="btn btn-ghost">
-                  View Projects
+                  לראות פרויקטים
                 </Link>
               </motion.div>
             </div>

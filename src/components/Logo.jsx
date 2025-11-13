@@ -12,7 +12,7 @@ export default function Logo({ className = "", size = "default" }) {
   return (
     <Link
       to="/"
-      className={`flex items-center space-x-3 group transition-all duration-300 ${className}`}
+      className={`flex items-center space-x-3 space-x-reverse group transition-all duration-300 ${className}`}
     >
       {/* Brain Icon */}
       <motion.div
@@ -105,12 +105,12 @@ export default function Logo({ className = "", size = "default" }) {
         </motion.span>
         {size === "large" && (
           <motion.span
-            className="text-xs font-medium text-slate-500 uppercase tracking-wider"
+            className="text-xs font-medium text-slate-500 tracking-wider"
             initial={{ opacity: 0, y: -5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Software Development
+            אסף ארדמן • סטודיו לפיתוח דיגיטלי
           </motion.span>
         )}
       </div>

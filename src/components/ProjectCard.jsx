@@ -34,7 +34,7 @@ export default function ProjectCard({ project }) {
             {project.isLive && (
               <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
                 <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                LIVE
+                חי
               </div>
             )}
           </div>
@@ -60,7 +60,7 @@ export default function ProjectCard({ project }) {
               ))}
               {project.tags.length > 3 && (
                 <Chip className="text-xs">
-                  +{project.tags.length - 3} more
+                  +{project.tags.length - 3} נוספים
                 </Chip>
               )}
             </div>

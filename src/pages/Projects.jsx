@@ -8,11 +8,12 @@ import { projects } from '../data/projects';
 import { fadeInUp, staggerContainer } from '../lib/motion';
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const defaultFilter = 'הכל';
+  const [activeFilter, setActiveFilter] = useState(defaultFilter);
 
-  const allTags = ['All', ...new Set(projects.flatMap(project => project.tags))];
+  const allTags = [defaultFilter, ...new Set(projects.flatMap(project => project.tags))];
 
-  const filteredProjects = activeFilter === 'All'
+  const filteredProjects = activeFilter === defaultFilter
     ? projects
     : projects.filter(project => project.tags.includes(activeFilter));
 
@@ -20,8 +21,8 @@ export default function Projects() {
     <PageTransition>
       <div className="pt-24 pb-16">
         <Section
-          title="All Projects"
-          subtitle="A comprehensive look at my work across different technologies and domains"
+          title="כל הפרויקטים של Erdmind"
+          subtitle="מערכות חיות שבנינו לסטארטאפים, מותגים וארגונים בישראל ובעולם"
         >
           <motion.div
             variants={staggerContainer}
@@ -66,7 +67,7 @@ export default function Projects() {
               className="text-center py-12"
             >
               <p className="text-slate-500 text-lg">
-                No projects found with the selected filter.
+                אין פרויקטים שמתאימים לסינון שבחרתם.
               </p>
             </motion.div>
           )}

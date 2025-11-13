@@ -12,18 +12,18 @@ export default function Services() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      title: 'Web Application Development',
-      description: 'We build modern, scalable web applications that drive business growth. From concept to deployment, we handle everything.',
+      title: 'אתרי פרימיום ואפליקציות ווב',
+      description: 'עיצוב חוויית משתמש, פיתוח React/Next.js בעברית וחיבור לכלי שיווק ואוטומציה - הכל באחריות Erdmind.',
       features: [
-        'Custom React & Next.js applications',
-        'Progressive Web Apps (PWA)',
-        'E-commerce platforms',
-        'SaaS product development',
-        'Admin dashboards and CRM systems',
-        'Responsive design for all devices'
+        'SaaS ואתרי תדמית עם עיצוב ייחודי',
+        'Headless CMS ותשתיות מאובטחות',
+        'SEO טכני ומדידה מובנית',
+        'התאמה מלאה למובייל ול-RTL',
+        'CI/CD ומוניטורינג מובנה',
+        'הדרכה וצוות תמיכה'
       ],
-      technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'Tailwind CSS'],
-      pricing: 'Starting from $5,000'
+      technologies: ['React', 'Next.js', 'Headless CMS', 'Tailwind', 'Vercel'],
+      pricing: 'החל מ-₪18,000'
     },
     {
       icon: (
@@ -31,18 +31,18 @@ export default function Services() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       ),
-      title: 'Mobile App Development',
-      description: 'Native-quality mobile applications for iOS and Android. One codebase, dual platform deployment.',
+      title: 'אפליקציות מובייל',
+      description: 'פיתוח React Native/Expo עם חוויית משתמש נייטיבית, בדיקות מלאות והעלאה לחנויות Apple ו-Google.',
       features: [
-        'Cross-platform React Native apps',
-        'Native iOS and Android development',
-        'Mobile app UI/UX design',
-        'App Store and Play Store deployment',
-        'Push notifications and analytics',
-        'Offline-first architecture'
+        'UI/UX מותאם לשתי הפלטפורמות',
+        'שכבות אבטחה והתחברות',
+        'Push notifications והעברת נתונים',
+        'אנליטיקה מובייל בזמן אמת',
+        'תמיכה במצב Offline',
+        'פריסה והדרכה לצוות'
       ],
-      technologies: ['React Native', 'Expo', 'iOS', 'Android', 'Firebase'],
-      pricing: 'Starting from $8,000'
+      technologies: ['React Native', 'Expo', 'Android', 'iOS', 'Firebase'],
+      pricing: 'החל מ-₪28,000'
     },
     {
       icon: (
@@ -50,18 +50,18 @@ export default function Services() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       ),
-      title: 'AI Integration & Automation',
-      description: 'Integrate cutting-edge AI capabilities into your existing products or build new AI-powered solutions.',
+      title: 'הטמעת AI ואוטומציה',
+      description: 'בניית עוזרים חכמים, זרימות RAG ו-AI בעברית שמבינים את התהליכים שלכם ומתחברים למקורות המידע.',
       features: [
-        'ChatGPT and OpenAI API integration',
-        'Custom AI chatbots and assistants',
-        'Document processing with RAG',
-        'Automated workflow systems',
-        'AI-powered analytics and insights',
-        'Machine learning model integration'
+        'אינטגרציה ל-OpenAI/Azure ו-API ארגוניים',
+        'עוזרי שירות ותמיכה בעברית',
+        'תהליכי RAG למסמכים פנימיים',
+        'אוטומציה בין צוותים וכלי SaaS',
+        'מדידה ו-Insights בזמן אמת',
+        'עמידה במדיניות אבטחת מידע'
       ],
-      technologies: ['OpenAI', 'LangChain', 'Pinecone', 'Python', 'TensorFlow'],
-      pricing: 'Starting from $4,000'
+      technologies: ['OpenAI', 'LangChain', 'Supabase', 'Pinecone', 'Azure'],
+      pricing: 'החל מ-₪16,000'
     },
     {
       icon: (
@@ -69,18 +69,18 @@ export default function Services() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
       ),
-      title: 'API Development & Integration',
-      description: 'Robust backend systems and seamless third-party integrations that power your applications.',
+      title: 'Backend ו-API',
+      description: 'בניית שרותים מבוססי Node.js / NestJS, GraphQL ו-REST עם תיעוד מלא ואינטגרציה לכל מערכת.',
       features: [
-        'RESTful API development',
-        'GraphQL API implementation',
-        'Third-party API integration (Stripe, Twilio, etc.)',
-        'Microservices architecture',
-        'Database design and optimization',
-        'Authentication and security'
+        'ארכיטקטורת Microservices',
+        'DB Design ו-Performance tuning',
+        'אינטגרציות תשלום, CRM ו-ERP',
+        'ניהול הרשאות ואבטחה (OAuth/SAML)',
+        'תשתית בדיקות אוטומטית',
+        'Observability ו-Alerts'
       ],
-      technologies: ['Node.js', 'Express', 'GraphQL', 'MongoDB', 'PostgreSQL'],
-      pricing: 'Starting from $3,000'
+      technologies: ['Node.js', 'NestJS', 'PostgreSQL', 'MongoDB', 'GraphQL'],
+      pricing: 'החל מ-₪14,000'
     },
     {
       icon: (
@@ -88,18 +88,18 @@ export default function Services() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
         </svg>
       ),
-      title: 'Cloud & DevOps',
-      description: 'Deploy, scale, and maintain your applications with modern cloud infrastructure and best practices.',
+      title: 'ענן ו-DevOps',
+      description: 'פריסת תשתיות בענן, בניית CI/CD אוטומטי וניטור מלא - כדי שתוכלו להתמקד בליבה העסקית.',
       features: [
-        'AWS cloud deployment and management',
-        'CI/CD pipeline setup (GitHub Actions, etc.)',
-        'Docker containerization',
-        'Server configuration and optimization',
-        'Performance monitoring and scaling',
-        'Automated backups and disaster recovery'
+        'הקמה וניהול של AWS/Azure',
+        'אבטחה, ניטור והתראות',
+        'Docker/Kubernetes ו-Scaling',
+        'CI/CD ללא Downtime',
+        'גיבויים והתאוששות מאסון',
+        'מסמכי Runbook והדרכה'
       ],
-      technologies: ['AWS', 'Docker', 'Kubernetes', 'GitHub Actions', 'Nginx'],
-      pricing: 'Starting from $2,000'
+      technologies: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'Terraform'],
+      pricing: 'החל מ-₪9,000'
     },
     {
       icon: (
@@ -107,41 +107,41 @@ export default function Services() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      title: 'MVP Development',
-      description: 'Launch your startup idea fast. We build MVPs that validate your concept and attract investors in 4-8 weeks.',
+      title: 'פיתוח MVP מהיר',
+      description: 'חבילת השקה לסטארטאפים - מאיפיון חכם ועד מוצר עובד למשקיעים או לקוחות ראשונים תוך 4-8 שבועות.',
       features: [
-        'Rapid prototyping and development',
-        'Core feature implementation',
-        'User authentication and onboarding',
-        'Payment integration (if needed)',
-        'Investor-ready product',
-        'Scalable foundation for future growth'
+        'סדנת Product קצרה',
+        'UX/UI ומיתוג ראשוני',
+        'אימות משתמשים ותשלומים',
+        'חיבור לכלי ניתוח ושיווק',
+        'תכנית פיתוח להמשך',
+        'ליווי בהצגת המוצר'
       ],
-      technologies: ['Next.js', 'Vercel', 'Supabase', 'Stripe', 'Tailwind CSS'],
-      pricing: 'Starting from $6,000'
+      technologies: ['Next.js', 'Supabase', 'Stripe', 'Tailwind', 'Vercel'],
+      pricing: 'החל מ-₪22,000'
     }
   ];
 
   const process = [
     {
       step: '01',
-      title: 'Discovery Call',
-      description: 'We start with a free consultation to understand your needs, goals, and vision.'
+      title: 'שיחת היכרות',
+      description: 'מבינים יעדים, קהל ומדדים כבר בשיחה הראשונה (ללא עלות).'
     },
     {
       step: '02',
-      title: 'Proposal & Planning',
-      description: 'Receive a detailed proposal with timeline, milestones, and pricing within 24-48 hours.'
+      title: 'הצעה ותכנון',
+      description: 'מסמך תהליך, לוחות זמנים והשקעה מדויקת - נשלח אליכם תוך 48 שעות.'
     },
     {
       step: '03',
-      title: 'Development',
-      description: 'Regular updates and demos throughout the development cycle. Your feedback shapes the product.'
+      title: 'פיתוח ושקיפות',
+      description: 'ספרינטים קצרים, דמו שבועי וגישה לכלי המשימות כדי שתהיו בעניינים.'
     },
     {
       step: '04',
-      title: 'Launch & Support',
-      description: 'Smooth deployment to production with ongoing support and maintenance options.'
+      title: 'השקה וליווי',
+      description: 'עלייה חלקה לענן, מעקב מדדים ואפשרות לתחזוקה שוטפת וצוות on-call.'
     }
   ];
 
@@ -157,14 +157,14 @@ export default function Services() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-gradient">Our Services</span>
+              <span className="text-gradient">חבילות הפיתוח של Erdmind</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-8">
-              End-to-end software development solutions that drive business growth
+              שירות מקצה לקצה - מחקר, UI/UX, פיתוח, DevOps והטמעת AI - שמותאם לשוק הישראלי ולצוות שלכם.
             </p>
             <motion.div {...hoverScale}>
               <Link to="/contact" className="btn btn-primary text-lg px-10 py-4 inline-block">
-                Start Your Project
+                להתחיל פרויקט
               </Link>
             </motion.div>
           </motion.div>
@@ -215,17 +215,17 @@ export default function Services() {
                     to="/contact"
                     className="btn btn-primary inline-block"
                   >
-                    Get Quote
+                    לקבל הצעת מחיר
                   </Link>
                 </motion.div>
               </div>
               <div className={index % 2 === 1 ? 'md:order-1' : ''}>
                 <div className="card p-8 bg-slate-50">
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">What's Included:</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">מה מקבלים בחבילה</h3>
                   <ul className="space-y-3">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-start">
-                        <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 text-green-500 ml-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         <span className="text-slate-700">{feature}</span>
@@ -241,8 +241,8 @@ export default function Services() {
 
       {/* Process */}
       <Section
-        title="Our Process"
-        subtitle="From idea to launch in 4 simple steps"
+        title="איך נראה התהליך"
+        subtitle="ציר זמן שקוף שמתחיל בשיחת היכרות ומסתיים במוצר חי ומנוהל"
         className="bg-slate-100"
       >
         <motion.div
@@ -275,8 +275,8 @@ export default function Services() {
 
       {/* CTA */}
       <Section
-        title="Ready to Get Started?"
-        subtitle="Free consultation • Fast turnaround • Transparent pricing"
+        title="מוכנים להזניק את המוצר?"
+        subtitle="שיחת ייעוץ ללא התחייבות • תגובה עד 24 שעות • הצעה שקופה בעברית"
         className="bg-gradient-to-br from-blue-600 to-blue-700 text-white"
         containerClassName="text-center"
       >
@@ -288,10 +288,10 @@ export default function Services() {
         >
           <motion.div {...hoverScale} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="btn bg-white text-blue-600 hover:bg-slate-100 text-lg px-10 py-4">
-              Schedule Consultation
+              לתאם שיחת ייעוץ
             </Link>
             <Link to="/projects" className="btn btn-ghost text-lg px-10 py-4 border-2 border-white hover:bg-white hover:text-blue-600">
-              View Case Studies
+              לראות פרויקטים חיים
             </Link>
           </motion.div>
         </motion.div>

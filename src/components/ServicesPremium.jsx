@@ -16,9 +16,9 @@ export default function ServicesPremium() {
           </div>
         </div>
       ),
-      title: 'Web Applications',
-      description: 'Custom React & Next.js applications built for scale and performance.',
-      features: ['React & Next.js', 'Cloud Native', 'Real-time Features']
+      title: 'אפליקציות ווב',
+      description: 'מערכות React/Next.js עם תמיכה בעברית, ביצועים גבוהים וחיבורי ענן מאובטחים.',
+      features: ['React & Next.js מותאם RTL', 'חוויית משתמש בעברית', 'פיצ\'רים בזמן אמת']
     },
     {
       icon: (
@@ -31,9 +31,9 @@ export default function ServicesPremium() {
           </div>
         </div>
       ),
-      title: 'Mobile Apps',
-      description: 'Native-quality iOS & Android applications with one codebase.',
-      features: ['React Native', 'Cross-platform', 'App Store Ready']
+      title: 'אפליקציות מובייל',
+      description: 'חוויה אחידה ב-iOS וב-Android עם React Native ויכולות נייטיב.',
+      features: ['React Native/Expo', 'התראות ודיווחים', 'העלאה לחנויות']
     },
     {
       icon: (
@@ -46,9 +46,9 @@ export default function ServicesPremium() {
           </div>
         </div>
       ),
-      title: 'AI Integration',
-      description: 'ChatGPT, automation, and custom AI solutions for your business.',
-      features: ['OpenAI APIs', 'Custom Models', 'Automation']
+      title: 'הטמעת AI',
+      description: 'עוזרים חכמים בעברית, אוטומציה עסקית וזרימות RAG מחוברות למסמכים שלכם.',
+      features: ['OpenAI ו-Azure OpenAI', 'מודלים מותאמים', 'אוטומציה של תהליכים']
     },
     {
       icon: (
@@ -61,9 +61,9 @@ export default function ServicesPremium() {
           </div>
         </div>
       ),
-      title: 'API Development',
-      description: 'Scalable backend systems and third-party integrations.',
-      features: ['REST & GraphQL', 'Microservices', 'Cloud Hosting']
+      title: 'פיתוח API ומיקרו-שירותים',
+      description: 'תשתיות Node.js מהירות, GraphQL ואינטגרציות לתשלומים, CRM ועוד.',
+      features: ['REST/GraphQL', 'אינטגרציות עסקיות', 'אבטחה והרשאות']
     },
     {
       icon: (
@@ -76,9 +76,9 @@ export default function ServicesPremium() {
           </div>
         </div>
       ),
-      title: 'Cloud & DevOps',
-      description: 'AWS deployment, CI/CD, and infrastructure management.',
-      features: ['AWS Setup', 'CI/CD Pipelines', 'Auto-scaling']
+      title: 'ענן ו-DevOps',
+      description: 'ניהול תצורה בענן, CI/CD ותפעול מלא של סביבת הייצור שלכם.',
+      features: ['תצורת AWS/Azure', 'CI/CD אוטומטי', 'מעקב ואבטחה']
     },
     {
       icon: (
@@ -91,17 +91,17 @@ export default function ServicesPremium() {
           </div>
         </div>
       ),
-      title: 'MVP Development',
-      description: 'Launch your startup idea in 4-8 weeks with investor-ready quality.',
-      features: ['Rapid Launch', 'Core Features', 'Scalable Base']
+      title: 'פיתוח MVP מהיר',
+      description: 'השקה לראווה תוך שבועות ספורים - כולל UX, פיתוח ועלייה חכמה לענן.',
+      features: ['איפיון ממוקד', 'פיצ\'רים מרכזיים', 'בסיס סקלאבילי']
     }
   ];
 
   return (
     <Section
       id="services"
-      title="What We Build"
-      subtitle="End-to-end software solutions that drive growth and innovation"
+      title="מה אנחנו בונים"
+      subtitle="פתרונות קצה-לקצה שמבליטים מותגים ישראליים בכל מסך"
       className="bg-white relative overflow-hidden"
     >
       {/* Background decoration */}
@@ -146,7 +146,7 @@ export default function ServicesPremium() {
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-slate-600">
-                      <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3" />
+                      <div className="w-1.5 h-1.5 bg-blue-600 rounded-full ml-3" />
                       {feature}
                     </li>
                   ))}
@@ -155,12 +155,12 @@ export default function ServicesPremium() {
                 {/* Link */}
                 <Link
                   to="/services"
-                  className="inline-flex items-center text-blue-600 font-semibold text-sm group-hover:gap-2 transition-all"
+                  className="inline-flex flex-row-reverse items-center text-blue-600 font-semibold text-sm group-hover:gap-2 transition-all"
                 >
-                  Learn more
-                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
+                  קראו עוד
                 </Link>
               </div>
             </div>
@@ -176,13 +176,13 @@ export default function ServicesPremium() {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="text-center mt-16"
       >
-        <Link to="/contact" className="btn btn-primary text-lg inline-flex items-center gap-2">
-          Start Your Project
+        <Link to="/contact" className="btn btn-primary text-lg inline-flex flex-row-reverse items-center gap-2">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
+          מתחילים פרויקט
         </Link>
-        <p className="text-slate-500 mt-4 text-sm">Free consultation • Fast response • Transparent pricing</p>
+        <p className="text-slate-500 mt-4 text-sm">שיחת ייעוץ ללא עלות • תגובה עד 24 שעות • הצעת מחיר שקופה</p>
       </motion.div>
     </Section>
   );

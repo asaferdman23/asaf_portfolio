@@ -19,7 +19,7 @@ A modern, responsive portfolio website built with React, Vite, and Framer Motion
 - **Page Transitions** - Seamless navigation between routes
 - **Parallax Effects** - Subtle background movements on scroll
 - **Project Filtering** - Interactive project gallery with tag-based filtering
-- **Contact Form** - Integrated with FormSubmit.co for easy form handling
+- **Contact Form** - שולח לידים אל HubSpot ו/או תרחישי Make לפי משתני סביבה
 - **SEO Optimized** - Meta tags, Open Graph, and semantic HTML
 - **Performance Focused** - Optimized images, lazy loading, and efficient animations
 
@@ -92,12 +92,17 @@ cd landing_page
 npm install
 ```
 
-3. Start the development server:
+3. Duplicate the environment template and update the values:
+```bash
+cp .env.example .env
+```
+
+4. Start the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📦 Build & Deploy
 
@@ -156,12 +161,12 @@ npm run preview
 
 ### Form Submission
 
-Update the contact form action URL in `src/components/ContactForm.jsx`:
-
-```javascript
-// Replace with your email
-const response = await fetch('https://formsubmit.co/your@email.com', {
-```
+1. צרו קובץ `.env` מקומי בהתבסס על `.env.example`.
+2. הגדירו את המשתנים הרלוונטיים:
+   - `VITE_MAKE_URL` – כתובת ה-webhook של Make המטפלת בליד ומעבירה אותו ל-CRM/אוטומציות נוספות.
+   - `VITE_HUBSPOT_PORTAL_ID` + `VITE_HUBSPOT_FORM_GUID` – מזהי טופס HubSpot (אופציונלי). הטופס ישלח נתונים ישירות ל-CRM לצד Make.
+3. הטופס ב-`src/components/ContactForm.jsx` ישלח את הפרטים לכל יעד שמוגדר במשתנים (אפשר להפעיל יעד אחד או את שניהם במקביל).
+4. בעת חוסר הגדרה של משתני סביבה, הטופס יחזיר שגיאה בממשק ותופיע התראה בקונסול.
 
 ### SEO & Meta Tags
 
@@ -185,7 +190,7 @@ Add Google Analytics or other tracking scripts to `index.html`.
 1. **Build Errors**: Ensure all dependencies are installed
 2. **Animation Issues**: Check for conflicting CSS or missing Framer Motion imports
 3. **Routing Problems**: Verify React Router setup and route definitions
-4. **Form Submission**: Confirm FormSubmit.co configuration
+4. **Form Submission**: ודאו ש־`VITE_MAKE_URL` (ואם צריך גם מזהי HubSpot) מוגדרים ב-`.env`
 
 ## 📝 License
 

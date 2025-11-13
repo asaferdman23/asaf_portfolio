@@ -6,26 +6,26 @@ export default function About() {
   const highlights = [
     {
       category: "Frontend",
-      skills: "React, Vite, Tailwind, micro-frontends"
+      skills: "React, Next.js, Tailwind, Design Systems"
     },
     {
       category: "Backend",
-      skills: "Node.js, Express, MongoDB/DynamoDB"
+      skills: "Node.js, NestJS, PostgreSQL, MongoDB"
     },
     {
       category: "AI",
-      skills: "prompts, agents, analytics, RAG prototypes"
+      skills: "Agents בעברית, RAG, תהליכי אוטומציה"
     },
     {
       category: "DevOps",
-      skills: "Docker, CI/CD, AWS basics"
+      skills: "Docker, Kubernetes, CI/CD, Cloud"
     }
   ];
 
   return (
     <Section
-      title="About Erdmind"
-      subtitle="Building the next generation of web applications and AI-powered solutions"
+      title="על Erdmind"
+      subtitle="סטודיו בוטיק שמוביל אסף ארדמן - מפתח מערכות ו-AI לחברות שמחפשות רמת ביצוע של אנטרפרייז"
     >
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <motion.div
@@ -37,13 +37,13 @@ export default function About() {
         >
           <div className="card p-8">
             <p className="text-lg mb-6 leading-relaxed">
-              <span className="font-bold text-blue-600">Erdmind is a full-stack development company.</span> With 4+ years of experience across high-growth startups and complex system architectures, we specialize in building scalable platforms that perform under pressure.
+              <span className="font-bold text-blue-600">Erdmind הוא סטודיו Full Stack פורץ דרך.</span> עם יותר מארבע שנות ניסיון hands-on מול סטארטאפים צומחים וארגונים, אנחנו בונים מערכות שמחזיקות עומסים ומניעות מדדים.
             </p>
             <p className="text-lg mb-6 leading-relaxed">
-              We currently maintain live production platforms including <span className="font-semibold">eliteteamacademy.com</span> and an <span className="font-semibold">AI-powered fitness coaching application</span> serving real users. Our approach combines rapid execution with robust engineering practices—delivering solutions that scale from MVP to enterprise.
+              אנחנו מתחזקים היום פלטפורמות חיות כמו <span className="font-semibold">eliteteamacademy.com</span> ואפליקציית אימוני כושר עם שכבת AI בשפה טבעית. כל מוצר יוצא לדרך עם ארכיטקטורה מסודרת, בדיקות ותיעוד - כך שאפשר להמשיך לפתח בבטחה.
             </p>
             <p className="text-lg mb-6 leading-relaxed">
-              From React-based SPAs to Node.js microservices, AI integrations to cloud infrastructure—Erdmind builds complete systems that drive business results. We deliver senior-level engineering expertise with the speed and focus of a dedicated development partner.
+              מאפליקציות React, דרך מיקרו-שירותים ב-Node ועד לאינטגרציות AI ועולמות הענן - Erdmind מספקת צוות פיתוח בכיר שפועל כמו שותף אמיתי בתוך הארגון שלכם.
             </p>
 
             <motion.div

@@ -2,11 +2,29 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { language } = useLanguage();
+
+  const navCopy = {
+    he: {
+      home: 'בית',
+      services: 'שירותים',
+      projects: 'פרויקטים',
+      contact: 'שיחת היכרות'
+    },
+    en: {
+      home: 'Home',
+      services: 'Services',
+      projects: 'Projects',
+      contact: 'Discovery Call'
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,11 +52,12 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
+  const labels = navCopy[language];
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/services', label: 'Services' },
-    { path: '/projects', label: 'Case Studies' },
-    { path: '/contact', label: 'Get Started' },
+    { path: '/', label: labels.home },
+    { path: '/services', label: labels.services },
+    { path: '/projects', label: labels.projects },
+    { path: '/contact', label: labels.contact },
   ];
 
   const toggleMobileMenu = () => {
@@ -62,7 +81,7 @@ export default function Navbar() {
             <Logo className="z-50 relative" />
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-2">
+            <div className="hidden md:flex items-center space-x-2 space-x-reverse">
               {navLinks.map((link) => (
                 <div key={link.path} className="relative">
                   <Link
@@ -85,6 +104,7 @@ export default function Navbar() {
                   </Link>
                 </div>
               ))}
+              <LanguageSwitcher />
             </div>
 
             {/* Mobile Menu Button */}
@@ -177,7 +197,7 @@ export default function Navbar() {
                       >
                         <Link
                           to={link.path}
-                          className={`flex items-center space-x-4 p-4 rounded-2xl transition-all duration-300 group relative overflow-hidden ${
+                          className={`flex items-center space-x-4 space-x-reverse p-4 rounded-2xl transition-all duration-300 group relative overflow-hidden ${
                             location.pathname === link.path
                               ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                               : 'hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 text-slate-700'
@@ -188,7 +208,7 @@ export default function Navbar() {
                           {location.pathname === link.path && (
                             <motion.div
                               layoutId="mobileActiveTab"
-                              className="ml-auto w-2 h-2 bg-white rounded-full"
+                              className="mr-auto w-2 h-2 bg-white rounded-full"
                               initial={false}
                               transition={{ type: "spring", stiffness: 300, damping: 30 }}
                             />
@@ -200,6 +220,10 @@ export default function Navbar() {
                         </Link>
                       </motion.div>
                     ))}
+                  </div>
+
+                  <div className="mt-8 border-t border-slate-200 pt-6">
+                    <LanguageSwitcher />
                   </div>
                 </div>
 
