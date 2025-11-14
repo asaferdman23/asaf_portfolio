@@ -1,6 +1,6 @@
-# Erdmind - Website
+# Ju-Mind - Full-Stack Development & AI Solutions
 
-A modern, responsive portfolio website built with React, Vite, and Framer Motion. Features smooth animations, clean design, and optimized performance.
+A modern, responsive website built with React, Vite, and Framer Motion. Showcasing web applications, mobile apps, AI agents, and custom software solutions with smooth animations and clean design.
 
 ## 🚀 Tech Stack
 
@@ -202,4 +202,4 @@ Feel free to fork this project and customize it for your own portfolio. If you f
 
 ---
 
-Built by Erdmind
+Built by Ju-Mind - Intelligent Systems. Built Fast.
