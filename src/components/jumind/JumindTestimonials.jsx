@@ -48,6 +48,31 @@ const item = {
 
 export default function JumindTestimonials() {
   const { language } = useLanguage();
+
+  const content = {
+    en: {
+      badge: 'Client Success',
+      title1: 'Trusted by',
+      title2: 'Industry Leaders',
+      description: 'Don\'t just take our word for it. Here\'s what our clients have to say',
+      trustedBy: 'Trusted by Leading Companies',
+      ctaTitle: 'Ready to join our success stories?',
+      ctaDescription: 'Let\'s discuss how we can help transform your business with web apps, mobile apps, AI, and custom software solutions.',
+      ctaButton: 'Let\'s Talk',
+    },
+    he: {
+      badge: 'סיפורי הצלחה',
+      title1: 'מובילי התעשייה',
+      title2: 'בוטחים בנו',
+      description: 'אל תסמכו רק על המילה שלנו - הנה מה שהלקוחות שלנו אומרים על העבודה המשותפת',
+      trustedBy: 'חברות מובילות בוטחות בנו',
+      ctaTitle: 'מוכנים להצטרף לסיפורי ההצלחה שלנו?',
+      ctaDescription: 'בואו נדבר על איך נוכל לעזור לכם להוביל את העסק קדימה עם אפליקציות ווב ומובייל, בינה מלאכותית ופתרונות תוכנה מותאמים אישית.',
+      ctaButton: 'בואו נדבר',
+    },
+  };
+
+  const t = content[language];
   
   return (
     <section className="section-jumind bg-gradient-to-b from-gray-50 to-white">
@@ -61,15 +86,15 @@ export default function JumindTestimonials() {
           className="text-center mb-20"
         >
           <div className="inline-block px-6 py-2 bg-[#4DA8FF]/10 rounded-full mb-6">
-            <span className="text-[#1E86F7] font-semibold text-sm tracking-wide uppercase">Client Success</span>
+            <span className="text-[#1E86F7] font-semibold text-sm tracking-wide uppercase">{t.badge}</span>
           </div>
           <h2 className="heading-jumind-lg mb-6">
-            Trusted by
+            {t.title1}
             <br />
-            <span className="text-gradient-jumind">Industry Leaders</span>
+            <span className="text-gradient-jumind">{t.title2}</span>
           </h2>
-          <p className="text-xl text-[#C9D1D9] max-w-3xl mx-auto">
-            Don&apos;t just take our word for it. Here&apos;s what our clients have to say
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            {t.description}
           </p>
         </motion.div>
 
@@ -136,8 +161,8 @@ export default function JumindTestimonials() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-24 text-center"
         >
-          <p className="text-[#C9D1D9] mb-8 text-sm uppercase tracking-wide font-semibold">
-            Trusted by Leading Companies
+          <p className="text-slate-500 mb-8 text-sm uppercase tracking-wide font-semibold">
+            {t.trustedBy}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-40">
             {/* Placeholder for company logos - using text for now */}
@@ -158,13 +183,13 @@ export default function JumindTestimonials() {
           className="text-center mt-16 p-12 bg-gradient-to-br from-[#4DA8FF]/10 to-[#1E86F7]/10 rounded-3xl border border-[#4DA8FF]/20"
         >
           <h3 className="text-3xl font-bold text-[#0A0A0A] mb-4">
-            Ready to join our success stories?
+            {t.ctaTitle}
           </h3>
-          <p className="text-[#C9D1D9] mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how we can help transform your business with web apps, mobile apps, AI, and custom software solutions.
+          <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+            {t.ctaDescription}
           </p>
           <a href="#contact" className="btn-jumind-primary">
-            {language === 'he' ? 'בוא נדבר' : 'Let\'s Talk'}
+            {t.ctaButton}
           </a>
         </motion.div>
       </div>

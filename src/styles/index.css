@@ -34,6 +34,14 @@
   .container-jumind {
     @apply container mx-auto px-6 md:px-12 lg:px-16 max-w-7xl;
   }
+  
+  /* Logo-inspired gradient text */
+  .text-logo-gradient {
+    background: linear-gradient(135deg, #00d4ff 0%, #4DA8FF 50%, #4169E1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   /* Jumind Cards */
   .card-jumind {
@@ -103,7 +111,11 @@
   }
 
   .text-soft-gray {
-    color: var(--color-soft-gray);
+    color: #64748b; /* Darker for better contrast */
+  }
+  
+  .text-description {
+    color: #475569; /* Even darker for important descriptions */
   }
 
   /* Jumind Sections */
@@ -154,7 +166,7 @@
 
   p {
     @apply leading-relaxed;
-    color: var(--color-soft-gray);
+    color: #64748b; /* Darker gray for better readability */
   }
 
   a {

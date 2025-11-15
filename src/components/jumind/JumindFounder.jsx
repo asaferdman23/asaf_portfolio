@@ -15,9 +15,9 @@ export default function JumindFounder() {
     he: {
       badge: 'Founder & CTO',
       name: 'אסף ארדמן',
-      title: 'המייסד שמוביל כל שורת קוד',
-      description: 'אסף מוביל אישית כל פרויקט ב-Ju-Mind – מאסטרטגיית המוצר והארכיטקטורה ועד סקירת הקוד והעלייה לענן. הוא מביא שילוב ייחודי של חשיבה עסקית, אנרגיה של סטארטאפ וסטנדרט הנדסי בכל פתרון שאנחנו מספקים.',
-      pills: ['CTO לפי דרישה', '4+ שנות ניסיון', 'עשרות מוצרים בפרודקשן'],
+      title: 'המייסד שאחראי על כל שורת קוד',
+      description: 'אסף מוביל באופן אישי כל פרויקט ב-Ju-Mind. מהרעיון הראשוני, דרך הארכיטקטורה והפיתוח, ועד ההעלאה לאוויר והתחזוקה השוטפת. הוא משלב חשיבה עסקית חדה עם אנרגיה של סטארטאפ וסטנדרטים הנדסיים ללא פשרות - כך אנחנו מבטיחים שכל פתרון שאנחנו מספקים באמת עובד.',
+      pills: ['CTO לפי דרישה', 'מעל 4 שנות ניסיון', 'עשרות מוצרים בפרודקשן'],
     },
   };
 
@@ -71,7 +71,7 @@ export default function JumindFounder() {
               <h3 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] leading-snug">
                 {t.title}
               </h3>
-              <p className="text-lg text-[#C9D1D9] leading-relaxed">
+              <p className="text-lg text-slate-600 leading-relaxed">
                 {t.description}
               </p>
               <div className={`flex flex-wrap ${language === 'he' ? 'justify-center lg:justify-end' : 'justify-center lg:justify-start'} gap-3`}>

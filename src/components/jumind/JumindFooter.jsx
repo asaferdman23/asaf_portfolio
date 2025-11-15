@@ -1,22 +1,71 @@
+import { useLanguage } from '../../contexts/LanguageContext';
+
 export default function JumindFooter() {
+  const { language } = useLanguage();
   const currentYear = new Date().getFullYear();
+
+  const content = {
+    en: {
+      tagline: 'AI-Powered Web & Automation Studio. We build intelligent systems that move your business forward.',
+      quickLinks: 'Quick Links',
+      about: 'About',
+      services: 'Services',
+      work: 'Work',
+      contact: 'Contact',
+      servicesTitle: 'Services',
+      webApps: 'Web Applications',
+      mobileApps: 'Mobile Apps',
+      aiAgents: 'AI Agents',
+      customSoftware: 'Custom Software',
+      copyright: 'All rights reserved.',
+      privacy: 'Privacy Policy',
+      terms: 'Terms of Service',
+      motto: 'Intelligent Systems. Built Fast.',
+    },
+    he: {
+      tagline: 'סטודיו לפיתוח מערכות תוכנה ואוטומציה מבוסס AI. אנחנו בונים מערכות חכמות שמקדמות את העסק שלכם קדימה.',
+      quickLinks: 'קישורים מהירים',
+      about: 'אודות',
+      services: 'שירותים',
+      work: 'עבודות',
+      contact: 'צור קשר',
+      servicesTitle: 'השירותים שלנו',
+      webApps: 'אפליקציות ווב',
+      mobileApps: 'אפליקציות מובייל',
+      aiAgents: 'סוכני בינה מלאכותית',
+      customSoftware: 'תוכנה מותאמת אישית',
+      copyright: 'כל הזכויות שמורות.',
+      privacy: 'מדיניות פרטיות',
+      terms: 'תנאי שימוש',
+      motto: 'מערכות חכמות. נבנות במהירות.',
+    },
+  };
+
+  const t = content[language];
 
   return (
     <footer className="bg-[#0A0A0A] text-white py-16">
       <div className="container-jumind">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-2">
-            <h2 className="text-4xl font-display font-black tracking-tighter mb-4">
-              JU-MIND
-            </h2>
+                  {/* Brand Column */}
+                  <div className="lg:col-span-2">
+                    <div className="flex items-center gap-4 mb-4">
+                      <img 
+                        src="/assets/jm_transparent.png" 
+                        alt="Ju-Mind Logo" 
+                        className="h-12 w-auto"
+                      />
+                      <h2 className="text-3xl font-display font-black tracking-tighter">
+                        JU-MIND
+                      </h2>
+                    </div>
             <p className="text-white/60 mb-6 max-w-md">
-              Full-Stack Development & AI Solutions. Building web apps, mobile apps, and intelligent systems for modern businesses.
+              {t.tagline}
             </p>
             <div className="flex gap-4">
               <a 
-                href="https://instagram.com" 
+                href="https://instagram.com/ju__mind" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/10 hover:bg-[#4DA8FF] flex items-center justify-center transition-colors duration-300 border border-white/10 hover:border-[#4DA8FF]"
@@ -42,26 +91,26 @@ export default function JumindFooter() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-bold text-lg mb-4">{t.quickLinks}</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
-                  About
+                <a href="#founder" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
+                  {t.about}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
-                  Services
+                  {t.services}
                 </a>
               </li>
               <li>
-                <a href="#work" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
-                  Work
+                <a href="#projects" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
+                  {t.work}
                 </a>
               </li>
               <li>
                 <a href="#contact" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
-                  Contact
+                  {t.contact}
                 </a>
               </li>
             </ul>
@@ -69,26 +118,26 @@ export default function JumindFooter() {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Services</h3>
+            <h3 className="font-bold text-lg mb-4">{t.servicesTitle}</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#services" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
-                  Web Applications
+                  {t.webApps}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
-                  Mobile Apps
+                  {t.mobileApps}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
-                  AI Agents
+                  {t.aiAgents}
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-white/60 hover:text-[#4DA8FF] transition-colors duration-200">
-                  Custom Software
+                  {t.customSoftware}
                 </a>
               </li>
             </ul>
@@ -101,14 +150,14 @@ export default function JumindFooter() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
           <p>
-            © {currentYear} Ju-Mind. All rights reserved.
+            © {currentYear} Ju-Mind. {t.copyright}
           </p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[#4DA8FF] transition-colors duration-200">
-              Privacy Policy
+              {t.privacy}
             </a>
             <a href="#" className="hover:text-[#4DA8FF] transition-colors duration-200">
-              Terms of Service
+              {t.terms}
             </a>
           </div>
         </div>
@@ -116,7 +165,7 @@ export default function JumindFooter() {
         {/* Subtle Tagline */}
         <div className="text-center mt-8 pt-8 border-t border-white/5">
           <p className="text-xs text-white/40">
-            Intelligent Systems. Built Fast.
+            {t.motto}
           </p>
         </div>
       </div>

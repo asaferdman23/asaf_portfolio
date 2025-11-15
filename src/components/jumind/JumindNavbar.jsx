@@ -37,18 +37,27 @@ export default function JumindNavbar() {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-black/5'
-          : 'bg-transparent'
+          ? 'bg-[#0A0A0A]/95 backdrop-blur-xl shadow-lg shadow-[#4DA8FF]/10 border-b border-[#4DA8FF]/10'
+          : 'bg-gradient-to-b from-[#0A0A0A]/80 to-transparent backdrop-blur-sm'
       }`}
     >
       <div className="container-jumind">
         <div className="flex items-center justify-between py-6">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="text-2xl font-display font-black tracking-tighter text-[#0A0A0A] group-hover:text-[#4DA8FF] transition-colors duration-300">
-              JU-MIND
-            </div>
-          </a>
+                  {/* Logo */}
+                  <a href="#" className="flex items-center gap-3 group">
+                    <img 
+                      src="/assets/jm_transparent.png" 
+                      alt="Ju-Mind Logo" 
+                      className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className={`text-xl font-display font-black tracking-tighter transition-colors duration-300 ${
+                      isScrolled 
+                        ? 'text-white group-hover:text-[#4DA8FF]' 
+                        : 'text-white group-hover:text-[#00d4ff]'
+                    }`}>
+                      JU-MIND
+                    </div>
+                  </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -56,7 +65,11 @@ export default function JumindNavbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-[#0A0A0A] hover:text-[#4DA8FF] font-medium transition-colors duration-300 relative group"
+                className={`font-medium transition-colors duration-300 relative group ${
+                  isScrolled 
+                    ? 'text-gray-300 hover:text-[#4DA8FF]' 
+                    : 'text-white/90 hover:text-[#00d4ff]'
+                }`}
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#4DA8FF] group-hover:w-full transition-all duration-300"></span>
@@ -66,7 +79,11 @@ export default function JumindNavbar() {
             {/* Language Switcher */}
             <button
               onClick={() => setLanguage(language === 'en' ? 'he' : 'en')}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors font-medium text-[#0A0A0A]"
+              className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 font-medium ${
+                isScrolled
+                  ? 'bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white border border-[#4DA8FF]/20'
+                  : 'bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-[#4DA8FF]/40'
+              }`}
               aria-label="Switch language"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,18 +96,18 @@ export default function JumindNavbar() {
               href="#contact"
               className="btn-jumind-primary !px-6 !py-3 text-base"
             >
-              {language === 'he' ? 'בוא נדבר' : 'Let\'s Talk'}
+              {language === 'he' ? 'בואו נדבר' : 'Let\'s Talk'}
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-white/10 hover:bg-white/20 transition-colors border border-[#4DA8FF]/20"
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 text-[#0A0A0A]"
+              className="w-6 h-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -123,7 +140,7 @@ export default function JumindNavbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
+            className="md:hidden bg-[#0A0A0A]/98 backdrop-blur-xl border-t border-[#4DA8FF]/20 overflow-hidden"
           >
             <div className="container-jumind py-6 space-y-4">
               {navLinks.map((link) => (
@@ -131,7 +148,7 @@ export default function JumindNavbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-[#0A0A0A] hover:text-[#4DA8FF] font-medium transition-colors duration-300 py-2"
+                  className="block text-gray-300 hover:text-[#4DA8FF] font-medium transition-colors duration-300 py-2"
                 >
                   {link.name}
                 </a>
@@ -143,7 +160,7 @@ export default function JumindNavbar() {
                   setLanguage(language === 'en' ? 'he' : 'en');
                   setIsMobileMenuOpen(false);
                 }}
-                className="w-full text-left py-2 text-[#0A0A0A] hover:text-[#4DA8FF] font-medium transition-colors duration-300"
+                className="w-full text-left py-2 text-gray-300 hover:text-[#4DA8FF] font-medium transition-colors duration-300"
               >
                 {language === 'en' ? '🌐 עברית' : '🌐 English'}
               </button>
@@ -153,7 +170,7 @@ export default function JumindNavbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block btn-jumind-primary text-center"
               >
-                {language === 'he' ? 'בוא נדבר' : 'Let\'s Talk'}
+                {language === 'he' ? 'בואו נדבר' : 'Let\'s Talk'}
               </a>
             </div>
           </motion.div>

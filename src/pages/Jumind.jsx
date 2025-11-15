@@ -4,7 +4,7 @@ import JumindServices from '../components/jumind/JumindServices';
 import JumindProjects from '../components/jumind/JumindProjects';
 import JumindWhy from '../components/jumind/JumindWhy';
 import JumindFounder from '../components/jumind/JumindFounder';
-import JumindTestimonials from '../components/jumind/JumindTestimonials';
+// import JumindTestimonials from '../components/jumind/JumindTestimonials'; // Commented out - placeholder testimonials
 import JumindContact from '../components/jumind/JumindContact';
 import JumindFooter from '../components/jumind/JumindFooter';
 
@@ -22,7 +22,7 @@ export default function Jumind() {
       <JumindProjects />
       <JumindWhy />
       <JumindFounder />
-      <JumindTestimonials />
+      {/* <JumindTestimonials /> */}
       <JumindContact />
       <JumindFooter />
     </motion.div>

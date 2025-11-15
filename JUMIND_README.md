@@ -61,7 +61,6 @@ A modern, futuristic landing page for Jumind - an AI-powered web and automation 
   - **Intelligence**: AI-first architecture
   - **Quality**: Enterprise-grade standards
 - Each with icon, detailed description, and feature list
-- Stats row at bottom (95% satisfaction, 50+ projects, etc.)
 
 ### 5. Testimonials
 - 3 client testimonials in card grid

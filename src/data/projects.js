@@ -29,12 +29,13 @@ export const projects = [
     slug: "sport-style",
     title: "SportStyleAA",
     year: 2025,
-    tags: ["React", "Node.js", "MongoDB", "Express"],
-    excerpt: "Sports apparel store we built for our client.",
-    description: "A comprehensive sports apparel store built with React and Vite. The application features a modern, responsive design with a focus on user experience. The store includes a product catalog, shopping cart, and checkout process. The application is built with a robust Node.js backend and MongoDB database, the platform handles sensitive information with enterprise-level security. Features include real-time messaging, document upload and verification, case status tracking, and automated notifications.\n\nThe frontend provides separate interfaces for professionals and families, with role-based access control and customizable dashboards. Advanced search and filtering capabilities help match families with appropriate service providers based on location, specialization, and availability.",
+    tags: ["E-commerce", "React", "Wix", "Live"],
+    excerpt: "LIVE sports apparel e-commerce store - full online shopping experience with inventory management.",
+    description: "A complete sports apparel e-commerce platform we built for our client. This live online store serves real customers, featuring a comprehensive product catalog, shopping cart, secure checkout, and order management system.\n\nWe developed the entire storefront with modern web technologies, implementing product browsing, filtering by categories, size selection, and inventory tracking. The platform includes customer account management, order history, and real-time stock updates.\n\nOur team integrated payment processing, shipping calculations, and automated email notifications. The responsive design ensures a smooth shopping experience across all devices - from browsing products to completing purchases. The store features promotional banners, sale countdowns, and product recommendations to boost conversions.",
     cover: "/assets/sport_style.png",
     gallery: ["/assets/sport_style.png"],
-    demo: "https://sportstyleaa.com"
+    demo: "https://sportstyleaa.com",
+    isLive: true
   },
   {
     slug: "postmate-gmail-clone",

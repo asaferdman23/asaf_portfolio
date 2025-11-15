@@ -15,12 +15,12 @@ export default function JumindProjects() {
       viewProject: 'View Project',
     },
     he: {
-      badge: 'העבודות שלנו',
+      badge: 'תיק העבודות שלנו',
       title: 'פרויקטים אמיתיים.',
       subtitle: 'תוצאות אמיתיות.',
-      description: 'מרעיון לפריסה, אנחנו בונים אפליקציות מוכנות לפרודקשן המשרתות משתמשים אמיתיים',
+      description: 'מרעיון ראשוני ועד השקה מלאה - הנה חלק מהפרויקטים שבנינו ומשרתים מאות משתמשים',
       liveLabel: 'LIVE',
-      viewProject: 'צפה בפרויקט',
+      viewProject: 'צפו בפרויקט',
     },
   };
 
@@ -105,7 +105,7 @@ export default function JumindProjects() {
                   {project.title}
                 </h3>
 
-                <p className="text-[#C9D1D9] text-sm line-clamp-2 mb-4">
+                <p className="text-slate-600 text-sm line-clamp-2 mb-4">
                   {project.excerpt}
                 </p>
 
@@ -129,11 +129,9 @@ export default function JumindProjects() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-white/70 mb-8">
-            {language === 'he' ? 'רוצה לראות עוד? צור קשר להצגה מלאה של תיק העבודות' : 'Want to see more? Get in touch for a complete portfolio presentation'}
-          </p>
+
           <a href="#contact" className="btn-jumind-outline">
-            {language === 'he' ? 'צור קשר' : 'Get In Touch'}
+            {language === 'he' ? 'רוצים לראות עוד? צור קשר' : 'Want to see more? Get In Touch'}
           </a>
         </motion.div>
       </div>

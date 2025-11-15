@@ -12,50 +12,61 @@ export default function JumindHero() {
       description: 'We build web applications, mobile apps, AI agents, automation systems, and custom software solutions. From SaaS platforms to enterprise systems, we deliver cutting-edge technology at unprecedented speed.',
       ctaPrimary: 'Let\'s Build Together',
       ctaSecondary: 'View Our Work',
-      stat1Label: 'Faster Delivery',
+      stat1Label: 'Client Satisfaction',
       stat2Label: 'AI Powered',
-      stat3Label: 'Custom Built',
+      stat3Label: 'Support Available',
       scrollText: 'Scroll to explore',
     },
     he: {
-      tagline: 'פיתוח Full-Stack ופתרונות AI',
-      headline1: 'מערכות חכמות.',
-      headline2: 'נבנות מהר.',
-      description: 'אנחנו בונים אפליקציות ווב, אפליקציות מובייל, סוכני AI, מערכות אוטומציה ופתרונות תוכנה מותאמים אישית. מפלטפורמות SaaS למערכות ארגוניות, אנחנו מספקים טכנולוגיה מתקדמת במהירות חסרת תקדים.',
-      ctaPrimary: 'בוא נבנה ביחד',
-      ctaSecondary: 'צפה בעבודות',
-      stat1Label: 'אספקה מהירה יותר',
-      stat2Label: 'מונע בינה מלאכותית',
-      stat3Label: 'בנוי בהתאמה אישית',
-      scrollText: 'גלול למטה',
+      tagline: 'סטודיו לפיתוח מערכות תוכנה ואוטומציה מבוסס AI',
+      headline1: 'בונים מערכות.',
+      headline2: 'חכמות.',
+      description: 'אנחנו בונים מערכות חכמות שמקדמות את העסק שלכם קדימה.',
+      ctaPrimary: 'בואו נבנה ביחד',
+      ctaSecondary: 'צפו בעבודות שלנו',
+      stat1Label: 'שביעות רצון',
+      stat2Label: 'תמיכה שוטפת 24/7',
+      stat3Label: 'התאמה אישית מלאה',
+      scrollText: 'גללו למטה לגלות עוד',
     },
   };
 
   const t = content[language];
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A0A0A] pt-32 md:pt-20 lg:pt-24">
+      {/* Subtle gradient backdrop matching logo style */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0f1419] to-[#0A0A0A]"></div>
       
-      {/* Gradient Orbs */}
-      <div className="absolute top-20 -left-20 w-96 h-96 bg-[#4DA8FF] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float"></div>
-      <div className="absolute bottom-20 -right-20 w-96 h-96 bg-[#1E86F7] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float" style={{ animationDelay: '2s' }}></div>
+      {/* Very subtle ambient glow - barely visible */}
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-[#00d4ff]/5 via-[#4DA8FF]/8 to-[#4169E1]/5 rounded-full filter blur-[120px] opacity-60"></div>
+      
+      {/* Subtle side accents */}
+      <div className="absolute top-20 -left-40 w-[400px] h-[400px] bg-[#00d4ff]/3 rounded-full filter blur-3xl"></div>
+      <div className="absolute bottom-20 -right-40 w-[400px] h-[400px] bg-[#4169E1]/3 rounded-full filter blur-3xl"></div>
       
       {/* Content */}
       <div className="container-jumind relative z-10">
-        <div className="text-center max-w-5xl mx-auto space-y-12">
-          {/* Logo */}
+        <div className="text-center max-w-6xl mx-auto flex flex-col items-center justify-center min-h-screen py-20 space-y-10 md:space-y-14">
+          {/* Logo - THE Main Title - Naturally integrated */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="inline-block"
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+            className="relative"
           >
-            <div className="relative">
-              <h1 className="text-8xl md:text-9xl font-display font-black tracking-tighter text-[#0A0A0A] mb-4">
-                JU-MIND
-              </h1>
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#4DA8FF]/20 to-[#1E86F7]/20 blur-2xl -z-10"></div>
+            <div className="relative group inline-block">
+              {/* Main Logo - transparent, perfectly integrated */}
+              <img 
+                src="/assets/jm_transparent.png" 
+                alt="Ju-Mind - Intelligent Systems Built Fast" 
+                className="h-48 md:h-64 lg:h-80 w-auto relative z-10 animate-float"
+              />
+              
+              {/* Subtle ambient glow - just enough to make logo pop */}
+              <div className="absolute -inset-16 bg-gradient-to-r from-[#00d4ff]/12 via-[#4DA8FF]/15 to-[#4169E1]/12 blur-[60px] opacity-70 group-hover:opacity-100 transition-opacity duration-1000"></div>
+              
+              {/* Very subtle reflection effect */}
+              <div className="absolute -inset-8 bg-gradient-to-b from-transparent via-[#4DA8FF]/5 to-transparent blur-2xl"></div>
             </div>
           </motion.div>
 
@@ -63,23 +74,29 @@ export default function JumindHero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="px-4"
           >
-            <p className="text-xl md:text-2xl font-medium text-[#C9D1D9] tracking-wide">
-              {t.tagline}
-            </p>
+            <div className="inline-block px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+              <p className="text-base md:text-lg font-medium text-gray-300 tracking-wide">
+                {t.tagline}
+              </p>
+            </div>
           </motion.div>
 
           {/* Main Headline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="px-4"
           >
-            <h2 className="heading-jumind-xl mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white/90 leading-tight max-w-4xl mx-auto">
               {t.headline1}
-              <br />
-              <span className="text-gradient-jumind">{t.headline2}</span>
+              {' '}
+              <span className="text-white/70">
+                {t.headline2}
+              </span>
             </h2>
           </motion.div>
 
@@ -87,10 +104,10 @@ export default function JumindHero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="max-w-3xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="max-w-3xl mx-auto px-4"
           >
-            <p className="text-lg md:text-xl leading-relaxed text-[#C9D1D9]">
+            <p className="text-sm md:text-base lg:text-lg leading-relaxed text-gray-400/80">
               {t.description}
             </p>
           </motion.div>
@@ -100,7 +117,7 @@ export default function JumindHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4 px-4"
           >
             <a href="#contact" className="btn-jumind-primary">
               {t.ctaPrimary}
@@ -117,39 +134,24 @@ export default function JumindHero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="pt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="w-full grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto px-4 pt-8"
           >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-jumind mb-2">10x</div>
-              <div className="text-sm text-[#C9D1D9]">{t.stat1Label}</div>
+            <div className="text-center p-3 md:p-5 rounded-xl bg-white/3 backdrop-blur-sm border border-white/5 hover:border-white/10 hover:bg-white/5 transition-all duration-500 group">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white/80 group-hover:text-white mb-2 transition-colors">100%</div>
+              <div className="text-xs md:text-sm text-gray-500 group-hover:text-gray-400 transition-colors">{t.stat1Label}</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-jumind mb-2">24/7</div>
-              <div className="text-sm text-[#C9D1D9]">{t.stat2Label}</div>
+            <div className="text-center p-3 md:p-5 rounded-xl bg-white/3 backdrop-blur-sm border border-white/5 hover:border-white/10 hover:bg-white/5 transition-all duration-500 group">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white/80 group-hover:text-white mb-2 transition-colors">24/7</div>
+              <div className="text-xs md:text-sm text-gray-500 group-hover:text-gray-400 transition-colors">{t.stat2Label}</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-jumind mb-2">100%</div>
-              <div className="text-sm text-[#C9D1D9]">{t.stat3Label}</div>
+            <div className="text-center p-3 md:p-5 rounded-xl bg-white/3 backdrop-blur-sm border border-white/5 hover:border-white/10 hover:bg-white/5 transition-all duration-500 group">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white/80 group-hover:text-white mb-2 transition-colors">100%</div>
+              <div className="text-xs md:text-sm text-gray-500 group-hover:text-gray-400 transition-colors">{t.stat3Label}</div>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="flex flex-col items-center gap-2 text-[#C9D1D9]">
-          <span className="text-sm">{t.scrollText}</span>
-          <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-      </motion.div>
     </section>
   );
 }
