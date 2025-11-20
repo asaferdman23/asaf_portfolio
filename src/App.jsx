@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import JumindNavbar from './components/jumind/JumindNavbar';
+import MagneticCursor from './components/MagneticCursor';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -11,6 +13,7 @@ import ProjectDetails from './pages/ProjectDetails';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Jumind from './pages/Jumind';
+import { initSmoothScroll, destroySmoothScroll } from './lib/gsapAdvanced';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -42,9 +45,22 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  useEffect(() => {
+    // Initialize Lenis smooth scroll (optional - disabled for now)
+    // Uncomment to enable ultra-smooth scrolling:
+    // initSmoothScroll();
+
+    // Cleanup on unmount
+    return () => {
+      // destroySmoothScroll();
+    };
+  }, []);
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
+        {/* Custom Cursor - Disabled for now, enable by uncommenting: */}
+        {/* <MagneticCursor /> */}
         <ScrollToTop />
         <AnimatedRoutes />
       </div>

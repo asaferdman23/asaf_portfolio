@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function JumindFounder() {
@@ -26,25 +25,7 @@ export default function JumindFounder() {
   return (
     <section className="section-jumind bg-gradient-to-b from-gray-50 to-white">
       <div className="container-jumind">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-block px-6 py-2 bg-[#4DA8FF]/10 rounded-full mb-6">
-            <span className="text-[#1E86F7] font-semibold text-sm tracking-wide uppercase">
-              {language === 'he' ? 'המייסד' : 'Meet The Founder'}
-            </span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+        <div
           className="card-jumind-glow max-w-5xl mx-auto"
         >
           <div className="flex flex-col lg:flex-row items-center gap-10 p-8 lg:p-12">
@@ -86,7 +67,7 @@ export default function JumindFounder() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

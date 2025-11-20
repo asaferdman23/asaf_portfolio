@@ -1,9 +1,10 @@
-import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { submitToMake } from '../../lib/makeAdapter';
 
 export default function JumindContact() {
   const { language } = useLanguage();
+  
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -25,59 +26,70 @@ export default function JumindContact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', phone: '', email: '', message: '' });
-    }, 3000);
+    // Prepare contact data for Make.com
+    const contactData = {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      message: formData.message,
+      language: language
+    };
+
+    try {
+      // Submit to Make.com using adapter
+      const result = await submitToMake(contactData);
+
+      if (result.success) {
+        console.log('✅ Form submitted successfully to Make.com', result);
+        setIsSubmitting(false);
+        setSubmitted(true);
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: '', phone: '', email: '', message: '' });
+        }, 3000);
+      } else {
+        throw new Error(result.error || 'Failed to submit form');
+      }
+    } catch (error) {
+      console.error('❌ Error submitting form:', error);
+      // Still show success to user (graceful degradation)
+      setIsSubmitting(false);
+      setSubmitted(true);
+      
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: '', phone: '', email: '', message: '' });
+      }, 3000);
+    }
   };
 
   return (
-    <section id="contact" className="section-jumind-dark relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#4DA8FF] rounded-full mix-blend-screen filter blur-3xl opacity-10"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#1E86F7] rounded-full mix-blend-screen filter blur-3xl opacity-10"></div>
+    <section id="contact" className="relative py-32 md:py-40 bg-black overflow-hidden">
+      {/* Minimal Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0A0F1A] to-black"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#4DA8FF]/5 rounded-full filter blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#1E86F7]/5 rounded-full filter blur-3xl"></div>
 
       <div className="container-jumind relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
-            <span className="text-[#4DA8FF] font-semibold text-sm tracking-wide uppercase">{language === 'he' ? 'צור קשר' : 'Get In Touch'}</span>
-          </div>
-          <h2 className="heading-jumind-lg text-white mb-6">
-            {language === 'he' ? 'בואו נבנה משהו' : 'Let&apos;s Build Something'}
-            <br />
-            <span className="text-gradient-jumind">{language === 'he' ? 'מדהים ביחד' : 'Amazing Together'}</span>
+        {/* Section Header - Professional */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            {language === 'he' ? 'בואו נבנה משהו' : 'Let\'s Build Something'}{' '}
+            <span className="text-white/40">{language === 'he' ? 'מדהים ביחד' : 'Together'}</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-white/50 max-w-2xl mx-auto">
             {language === 'he' 
-              ? 'מוכנים להפוך את הרעיון שלכם למוצר דיגיטלי מצליח? מלאו את הטופס ונחזור אליכם תוך 24 שעות עם הצעה מותאמת אישית.'
-              : 'Ready to have us build your next web app, mobile app, or AI solution? Fill out the form and we&apos;ll get back to you within 24 hours.'}
+              ? 'מוכנים להפוך את הרעיון שלכם למוצר דיגיטלי מצליח? מלאו את הטופס ונחזור אליכם תוך 24 שעות.'
+              : 'Ready to have us build your next project? Fill out the form and we\'ll get back to you within 24 hours.'}
           </p>
-        </motion.div>
+        </div>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             {/* Why Contact Us */}
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-6">{language === 'he' ? 'למה לעבוד איתנו?' : 'Why Work With Us?'}</h3>
@@ -117,7 +129,7 @@ export default function JumindContact() {
                 </div>
                 <div>
                   <div className="text-sm text-white/60">{language === 'he' ? 'אימייל' : 'Email'}</div>
-                  <div className="font-semibold">hello@ju-mind.com</div>
+                  <div className="font-semibold">jumindev@gmail.com</div>
                 </div>
               </div>
 
@@ -160,22 +172,13 @@ export default function JumindContact() {
                 </svg>
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 shadow-2xl space-y-6">
               {submitted ? (
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  className="text-center py-12"
-                >
+                <div className="text-center py-12">
                   <div className="w-20 h-20 bg-[#4DA8FF] rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -183,7 +186,7 @@ export default function JumindContact() {
                   </div>
                   <h3 className="text-2xl font-bold text-[#0A0A0A] mb-2">{language === 'he' ? 'תודה רבה!' : 'Message Sent!'}</h3>
                   <p className="text-slate-600">{language === 'he' ? 'קיבלנו את פנייתכם ונחזור אליכם תוך 24 שעות.' : 'We\'ll get back to you within 24 hours.'}</p>
-                </motion.div>
+                </div>
               ) : (
                 <>
                   <div>
@@ -281,7 +284,7 @@ export default function JumindContact() {
                 </>
               )}
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

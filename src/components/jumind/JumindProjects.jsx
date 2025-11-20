@@ -1,9 +1,21 @@
-import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { projects } from '../../data/projects';
+import {
+  fadeUpOnScroll,
+  staggerCardsOnScroll,
+  createCardTilt,
+} from '../../lib/gsapAnimations';
 
 export default function JumindProjects() {
   const { language } = useLanguage();
+  
+  // Refs for GSAP
+  const sectionRef = useRef(null);
+  const headerRef = useRef(null);
+  const cardsRef = useRef([]);
+  const ctaRef = useRef(null);
 
   const content = {
     en: {
@@ -29,21 +41,56 @@ export default function JumindProjects() {
   // Show only live projects or top projects
   const featuredProjects = projects.filter(p => p.isLive).slice(0, 6);
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header animation
+      fadeUpOnScroll(headerRef.current, {
+        trigger: headerRef.current,
+        start: 'top 85%',
+      });
+
+      // Project cards stagger animation
+      staggerCardsOnScroll(cardsRef.current.filter(Boolean), {
+        trigger: cardsRef.current[0],
+        start: 'top 75%',
+      });
+
+      // CTA animation
+      fadeUpOnScroll(ctaRef.current, {
+        trigger: ctaRef.current,
+        start: 'top 85%',
+      });
+
+      // Card tilt effects
+      const tiltCleanups = [];
+      cardsRef.current.forEach((card) => {
+        if (card) {
+          const cleanup = createCardTilt(card, 0.3);
+          if (cleanup) tiltCleanups.push(cleanup);
+        }
+      });
+
+      return () => {
+        tiltCleanups.forEach((cleanup) => cleanup && cleanup());
+      };
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="projects" className="section-jumind-dark relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      id="projects"
+      className="section-jumind-dark relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#4DA8FF] rounded-full mix-blend-screen filter blur-3xl opacity-10"></div>
 
       <div className="container-jumind relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
+        {/* Section Header - GSAP */}
+        <div ref={headerRef} className="text-center mb-20 opacity-0">
           <div className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6 border border-white/20">
             <span className="text-[#4DA8FF] font-semibold text-sm tracking-wide uppercase">{t.badge}</span>
           </div>
@@ -55,21 +102,18 @@ export default function JumindProjects() {
           <p className="text-xl text-white/70 max-w-3xl mx-auto">
             {t.description}
           </p>
-        </motion.div>
+        </div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid - GSAP stagger & tilt */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
-            <motion.a
+            <a
               key={project.slug}
+              ref={(el) => (cardsRef.current[index] = el)}
               href={project.demo || '#'}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative bg-white rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+              className="group relative bg-white rounded-3xl overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 opacity-0"
             >
               {/* Project Image */}
               <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
@@ -117,23 +161,16 @@ export default function JumindProjects() {
                   </svg>
                 </div>
               </div>
-            </motion.a>
+            </a>
           ))}
         </div>
 
-        {/* View All Projects CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-
+        {/* View All Projects CTA - GSAP */}
+        <div ref={ctaRef} className="text-center mt-16 opacity-0">
           <a href="#contact" className="btn-jumind-outline">
             {language === 'he' ? 'רוצים לראות עוד? צור קשר' : 'Want to see more? Get In Touch'}
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

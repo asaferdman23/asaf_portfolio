@@ -16,8 +16,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+        sans: ['Heebo', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Heebo', 'system-ui', 'sans-serif'],
       },
       backdropBlur: {
         xs: '2px',

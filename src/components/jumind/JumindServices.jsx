@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const services = [
@@ -70,21 +69,6 @@ const services = [
   }
 ];
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15
-    }
-  }
-};
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-};
-
 export default function JumindServices() {
   const { language } = useLanguage();
 
@@ -110,84 +94,71 @@ export default function JumindServices() {
   const t = content[language];
 
   return (
-    <section id="services" className="section-jumind bg-gradient-to-b from-white to-gray-50">
-      <div className="container-jumind">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
-          <div className="inline-block px-6 py-2 bg-[#4DA8FF]/10 rounded-full mb-6">
-            <span className="text-[#1E86F7] font-semibold text-sm tracking-wide uppercase">{t.badge}</span>
-          </div>
-          <h2 className="heading-jumind-lg mb-6">
-            {t.title1}
-            <br />
-            <span className="text-gradient-jumind">{t.title2}</span>
+    <section
+      id="services"
+      className="relative py-32 md:py-40 bg-black overflow-hidden"
+      style={{ backgroundColor: '#000000' }}
+    >
+      {/* Solid background - no transparency */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0f1419] via-black to-black"></div>
+      
+      {/* Grid overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
+      
+      <div className="container-jumind relative z-10">
+        {/* Section Header - Professional */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            {t.title1} <span className="text-white/40">{t.title2}</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-white/50 max-w-2xl mx-auto">
             {t.description}
           </p>
-        </motion.div>
+        </div>
 
-        {/* Services Grid */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        {/* Services Grid - Minimal & Bold */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={item}
-              className="card-jumind group"
+              className="group relative p-8 md:p-10 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl hover:bg-white/10 hover:border-[#4DA8FF]/50 transition-all duration-500"
             >
-              {/* Icon */}
-              <div className="icon-jumind text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
+              {/* Number */}
+              <div className="absolute top-6 right-6 text-5xl font-black text-white/5 group-hover:text-[#4DA8FF]/10 transition-colors">
+                {String(index + 1).padStart(2, '0')}
               </div>
 
-              {/* Title */}
-              <h3 className="text-2xl font-bold text-[#0A0A0A] mb-4">
+              {/* Title - BOLD */}
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-[#4DA8FF] transition-colors leading-tight">
                 {language === 'he' ? service.titleHe : service.titleEn}
               </h3>
 
               {/* Description */}
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-white/60 leading-relaxed text-sm md:text-base">
                 {language === 'he' ? service.descriptionHe : service.descriptionEn}
               </p>
 
-              {/* Hover Arrow */}
-              <div className="mt-6 flex items-center text-[#4DA8FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-sm font-semibold mr-2">Learn More</span>
-                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </motion.div>
+              {/* Hover Indicator */}
+              <div className="mt-6 w-12 h-1 bg-[#4DA8FF] opacity-0 group-hover:opacity-100 group-hover:w-20 transition-all duration-500"></div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <p className="text-lg text-slate-600 mb-8">
+        <div className="text-center mt-20">
+          <p className="text-lg md:text-xl text-white/60 mb-8 max-w-2xl mx-auto">
             {t.ctaText}
           </p>
-          <a href="#contact" className="btn-jumind-secondary">
+          <a 
+            href="#contact" 
+            className="inline-block px-8 py-4 bg-white text-[#0A0A0A] rounded-full font-bold text-sm md:text-base hover:bg-[#4DA8FF] hover:text-white transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-[#4DA8FF]/50"
+          >
             {t.buttonText}
+            <svg className="w-5 h-5 inline-block ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

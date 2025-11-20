@@ -1,8 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ========================================
+   SMOOTH SCROLLING & PERFORMANCE
+   ======================================== */
+@layer base {
+  /* Smooth scrolling for entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Performance optimizations */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* GPU acceleration for transforms and opacity */
+  [class*="opacity-"],
+  [class*="transform"],
+  [class*="translate"],
+  [class*="rotate"],
+  [class*="scale"] {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* Smooth transitions for interactive elements */
+  a, button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
 
 /* Jumind Design System - CSS Variables */
 :root {
@@ -88,7 +118,7 @@
   /* Jumind Typography */
   .heading-jumind {
     @apply font-bold tracking-tight text-[#0A0A0A];
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-family: 'Heebo', sans-serif;
   }
 
   .heading-jumind-xl {
@@ -153,12 +183,12 @@
 
   body {
     @apply bg-white;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--color-black);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-family: 'Heebo', sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--color-black);
@@ -175,7 +205,7 @@
 
   input, textarea {
     @apply focus:ring-4 focus:border-[#4DA8FF] transition-all duration-200;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Heebo', sans-serif;
   }
 
   input:focus, textarea:focus {
