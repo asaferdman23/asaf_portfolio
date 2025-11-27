@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { theme } from '../../lib/theme';
@@ -16,7 +16,7 @@ export default function HeroSpline() {
   const headlineRef = useRef(null);
   const subheadlineRef = useRef(null);
   const descriptionRef = useRef(null);
-  const buttonsRef = useRef(null);
+  // const buttonsRef = useRef(null);
   const splineContainerRef = useRef(null);
 
   const content = {
@@ -62,13 +62,13 @@ export default function HeroSpline() {
         opacity: 0,
         duration: 0.8,
       }, 0.9)
-      .from(buttonsRef.current.children, {
-        y: 30,
-        opacity: 0,
-        scale: 0.9,
-        duration: 0.6,
-        stagger: 0.15,
-      }, 1.2)
+      // .from(buttonsRef.current.children, {
+      //   y: 30,
+      //   opacity: 0,
+      //   scale: 0.9,
+      //   duration: 0.6,
+      //   stagger: 0.15,
+      // }, 1.2)
       .from(splineContainerRef.current, {
         scale: 0.8,
         opacity: 0,
@@ -125,6 +125,7 @@ export default function HeroSpline() {
               style={{
                 fontSize: 'clamp(2.5rem, 6vw, 5rem)',
                 color: theme.colors.white,
+                paddingTop: '1rem',
               }}
             >
               {t.headline}
@@ -154,7 +155,7 @@ export default function HeroSpline() {
             </p>
 
             {/* CTA Buttons */}
-            <div
+            {/* <div
               ref={buttonsRef}
               className={`flex flex-col sm:flex-row gap-4 ${language === 'he' ? 'sm:justify-end' : ''}`}
             >
@@ -191,13 +192,14 @@ export default function HeroSpline() {
                   </svg>
                 </span>
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT: Spline 3D Scene */}
           <div
             ref={splineContainerRef}
             className={`relative h-[400px] md:h-[500px] lg:h-[600px] ${language === 'he' ? 'lg:order-1' : 'lg:order-2'}`}
+            style={{ padding: '2rem' }}
           >
             {/* Glow Effect Behind 3D */}
             <div
