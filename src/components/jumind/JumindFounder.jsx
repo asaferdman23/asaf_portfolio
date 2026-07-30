@@ -5,18 +5,18 @@ export default function JumindFounder() {
 
   const content = {
     en: {
-      badge: 'Founder & CTO',
+      badge: 'Founder & AI Builder',
       name: 'Asaf Erdman',
-      title: 'The founder behind every line of code',
-      description: 'Asaf personally leads every Ju-Mind project—from product strategy and architecture to code reviews and deployment. He brings a unique blend of business intuition, startup energy, and senior engineering standards to every solution we deliver.',
-      pills: ['CTO On-Demand', '4+ Years Experience', 'Dozens of Live Products'],
+      title: 'One builder. No account managers, no handoffs.',
+      description: 'Ju-Mind is founder-led by design. Asaf personally scopes, architects, builds, and ships every project — from AI agents and automations to full-stack systems. You talk directly to the person writing the code, which means faster decisions, no telephone-game between "sales" and "engineering," and a technical owner who is accountable for the system after launch, not just the pitch before it.',
+      pills: ['AI Automation', 'AI Agents', 'Full-Stack AI Systems'],
     },
     he: {
-      badge: 'Founder & CTO',
+      badge: 'מהנדס מייסד ומפתח מערכות AI',
       name: 'אסף ארדמן',
-      title: 'המייסד שאחראי על כל שורת קוד',
-      description: 'אסף מוביל באופן אישי כל פרויקט ב-Ju-Mind. מהרעיון הראשוני, דרך הארכיטקטורה והפיתוח, ועד ההעלאה לאוויר והתחזוקה השוטפת. הוא משלב חשיבה עסקית חדה עם אנרגיה של סטארטאפ וסטנדרטים הנדסיים ללא פשרות - כך אנחנו מבטיחים שכל פתרון שאנחנו מספקים באמת עובד.',
-      pills: ['CTO לפי דרישה', 'מעל 4 שנות ניסיון', 'עשרות מוצרים בפרודקשן'],
+      title: 'מפתח אחד. בלי אנשי מכירות ובלי העברות בין גורמים.',
+      description: 'אסף בעצמו מגדיר את ההיקף, בונה את הארכיטקטורה, מפתח ומעלה לאוויר כל פרויקט. אתם מדברים ישירות עם מי שכותב את הקוד, מה שאומר החלטות מהירות יותר, בלי "טלפון שבור" בין מכירות להנדסה, ובעל מקצוע אחד שאחראי על המערכת גם אחרי ההשקה - לא רק על המצגת לפני.',
+      pills: ['אוטומציות AI', 'סוכני AI', 'מערכות AI פול-סטאק'],
     },
   };
 
@@ -72,4 +72,3 @@ export default function JumindFounder() {
     </section>
   );
 }
-

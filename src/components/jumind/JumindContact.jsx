@@ -77,13 +77,13 @@ export default function JumindContact() {
         {/* Section Header - Professional */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            {language === 'he' ? 'בואו נבנה משהו' : 'Let\'s Build Something'}{' '}
-            <span className="text-white/40">{language === 'he' ? 'מדהים ביחד' : 'Together'}</span>
+            {language === 'he' ? 'גלו איפה AI' : 'Find Where AI'}{' '}
+            <span className="text-white/40">{language === 'he' ? 'יכול לחסוך לכם כסף' : 'Creates ROI'}</span>
           </h2>
           <p className="text-base md:text-lg text-white/50 max-w-2xl mx-auto">
             {language === 'he' 
-              ? 'מוכנים להפוך את הרעיון שלכם למוצר דיגיטלי מצליח? מלאו את הטופס ונחזור אליכם תוך 24 שעות.'
-              : 'Ready to have us build your next project? Fill out the form and we\'ll get back to you within 24 hours.'}
+              ? 'ספרו לנו על תהליך ידני, דף נחיתה, סוכן AI או מוצר דיגיטלי שאתם רוצים לבנות. נחזור אליכם תוך 24 שעות עם כיוון ברור לשלב הבא.'
+              : 'Tell us about a manual workflow, landing page, AI agent, or product you want to build. We will respond within 24 hours with a clear next step.'}
           </p>
         </div>
 
@@ -92,20 +92,20 @@ export default function JumindContact() {
           <div className="space-y-8">
             {/* Why Contact Us */}
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-6">{language === 'he' ? 'למה לעבוד איתנו?' : 'Why Work With Us?'}</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">{language === 'he' ? 'מה תקבלו בשיחת ההיכרות?' : 'What You Get From the Call'}</h3>
               <ul className="space-y-4">
                 {(language === 'he' ? [
-                  'ייעוץ ראשוני ללא עלות',
-                  'הצעת מחיר מפורטת תוך 48 שעות',
-                  'תמחור שקוף - ללא עלויות נסתרות',
-                  'ליווי אישי לאורך כל הדרך',
-                  'תמיכה ותחזוקה שוטפת לאחר ההשקה'
+                  'מיפוי מהיר של תהליך שאפשר להפוך לאוטומציה',
+                  'המלצה על אוטומציה, סוכן AI או דף נחיתה לפי הצורך',
+                  'הצעה לשלב ראשון ממוקד עם ערך עסקי ברור',
+                  'תמחור שקוף וללא עלויות נסתרות',
+                  'אפשרות לליווי שוטף לאחר ההשקה'
                 ] : [
-                  'Free initial consultation',
-                  'Custom proposals within 48 hours',
-                  'Transparent pricing, no hidden fees',
-                  'Dedicated project manager',
-                  'Ongoing support & maintenance'
+                  'Quick mapping of one workflow that can be automated',
+                  'A recommendation for an AI agent, automation, or landing page',
+                  'A small first step with a clear ROI target',
+                  'Transparent pricing with no hidden fees',
+                  'Optional ongoing support after launch'
                 ]).map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-[#4DA8FF] flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -142,7 +142,7 @@ export default function JumindContact() {
                 </div>
                 <div>
                   <div className="text-sm text-white/60">{language === 'he' ? 'מיקום' : 'Location'}</div>
-                  <div className="font-semibold">{language === 'he' ? 'צוות גלובלי מרחוק' : 'Global Remote Team'}</div>
+                  <div className="font-semibold">{language === 'he' ? 'עובד מרחוק, זמין גלובלית' : 'Remote, Available Worldwide'}</div>
                 </div>
               </div>
             </div>
@@ -160,8 +160,8 @@ export default function JumindContact() {
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/><path d="M12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                 </svg>
               </a>
-              <a 
-                href="https://linkedin.com" 
+              <a
+                href="https://www.linkedin.com/in/asaferdman/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-xl bg-white/10 hover:bg-[#4DA8FF] flex items-center justify-center transition-colors duration-300 border border-white/10 hover:border-[#4DA8FF]"
@@ -249,7 +249,7 @@ export default function JumindContact() {
                       required
                       rows="5"
                       className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-[#4DA8FF] outline-none transition-colors bg-white text-[#0A0A0A] resize-none"
-                      placeholder={language === 'he' ? 'ספר לנו על הפרויקט שלך, לוח הזמנים ודרישות ספציפיות...' : 'Tell us about your project, timeline, and any specific requirements...'}
+                      placeholder={language === 'he' ? 'איזה תהליך ידני, סוכן AI, דף נחיתה או מערכת אתם רוצים לבנות? מה המטרה העסקית שלכם?' : 'Which manual workflow, AI agent, landing page, or system do you want to build? What business result should it create?'}
                     ></textarea>
                   </div>
 
@@ -268,7 +268,7 @@ export default function JumindContact() {
                       </>
                     ) : (
                       <>
-                        {language === 'he' ? 'שלח הודעה' : 'Send Message'}
+                        {language === 'he' ? 'קבעו שיחה' : 'Book an AI Audit'}
                         <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
@@ -290,4 +290,3 @@ export default function JumindContact() {
     </section>
   );
 }
-

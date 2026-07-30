@@ -12,18 +12,18 @@ export default function JumindProjectsHorizontal() {
 
   const content = {
     en: {
-      badge: 'Featured Work',
-      title: 'Selected',
-      subtitle: 'Projects',
-      description: 'Our latest work',
+      badge: 'Proof',
+      title: 'Live',
+      subtitle: 'AI & Web Systems',
+      description: 'Real systems, campaigns, and products already online',
       liveLabel: 'LIVE',
       viewProject: 'View Project',
     },
     he: {
-      badge: 'עבודות נבחרות',
-      title: 'פרויקטים',
-      subtitle: 'נבחרים',
-      description: 'העבודות האחרונות שלנו',
+      badge: 'הוכחות',
+      title: 'מערכות AI',
+      subtitle: 'ומוצרי ווב פעילים',
+      description: 'מערכות, קמפיינים ומוצרים דיגיטליים שכבר עובדים בשטח',
       liveLabel: 'LIVE',
       viewProject: 'צפו בפרויקט',
     },
@@ -32,7 +32,7 @@ export default function JumindProjectsHorizontal() {
   const t = content[language];
 
   // Get featured projects
-  const featuredProjects = projects.filter(p => p.isLive).slice(0, 8);
+  const featuredProjects = projects.filter(p => p.isLive && p.featured).slice(0, 8);
   const totalProjects = featuredProjects.length;
 
   // How many cards to show at once
@@ -218,4 +218,3 @@ export default function JumindProjectsHorizontal() {
     </section>
   );
 }
-

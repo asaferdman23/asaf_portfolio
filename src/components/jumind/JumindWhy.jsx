@@ -7,23 +7,23 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    titleEn: 'Speed',
-    titleHe: 'מהירות',
-    subtitleEn: 'Your Product Live in Weeks',
-    subtitleHe: 'המוצר שלכם חי תוך שבועות',
-    descriptionEn: 'Get to market before your competition. You receive a fully functional product faster than you thought possible, so you can start generating revenue and validating your idea immediately.',
-    descriptionHe: 'הגיעו לשוק לפני המתחרים. אתם מקבלים מוצר פונקציונלי מלא מהר יותר ממה שחשבתם שאפשרי, כך שתוכלו להתחיל לייצר הכנסות ולאמת את הרעיון שלכם מיד.',
+    titleEn: 'Fast First ROI',
+    titleHe: 'ערך עסקי מהיר',
+    subtitleEn: 'Launch the First Valuable Workflow',
+    subtitleHe: 'מתחילים מהתהליך עם הכי הרבה ערך',
+    descriptionEn: 'We identify one workflow, campaign, or AI use case with a clear business return and ship the first working version quickly.',
+    descriptionHe: 'אנחנו מזהים תהליך, קמפיין או שימוש ב-AI שיכול לייצר ערך ברור, ובונים גרסה ראשונה עובדת בלי להסתבך בפרויקט גדול מדי.',
     featuresEn: [
-      'First version in your hands within weeks',
-      'Start earning revenue faster',
-      'Test your market quickly',
-      'Beat competitors to launch'
+      'AI audit before heavy build',
+      'First working version in weeks',
+      'Small scope, clear business target',
+      'Improve from real usage'
     ],
     featuresHe: [
-      'גרסה ראשונה בידיים שלכם תוך שבועות',
-      'התחילו להרוויח מהר יותר',
-      'בדקו את השוק שלכם במהירות',
-      'הקדימו מתחרים להשקה'
+      'לפני שלב הפיתוח ',
+      'גרסה עובדת תוך שבועות',
+      'היקף ממוקד ומטרה ברורה',
+      'שיפור לפי שימוש אמיתי בשטח'
     ]
   },
   {
@@ -32,23 +32,23 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
-    titleEn: 'Results',
-    titleHe: 'תוצאות',
-    subtitleEn: 'Built to Grow Your Business',
-    subtitleHe: 'בנוי להצמיח את העסק שלכם',
-    descriptionEn: 'You get a product that actually drives results. More customers, higher efficiency, increased revenue. Your system works for you 24/7, automating tasks and creating opportunities while you focus on strategy.',
-    descriptionHe: 'אתם מקבלים מוצר שבאמת מניע תוצאות. יותר לקוחות, יעילות גבוהה יותר, הכנסות מוגברות. המערכת שלכם עובדת בשבילכם 24/7,  נותן את האופציה ליצירת הזדמנויות בזמן שאתם מתמקדים באסטרטגיה.',
+    titleEn: 'Business Outcomes',
+    titleHe: 'תוצאות עסקיות',
+    subtitleEn: 'Not AI Demos. Working Systems.',
+    subtitleHe: 'לא דמו של AI. מערכת שעובדת באמת.',
+    descriptionEn: 'Every build is tied to a practical outcome: fewer manual hours, faster lead response, better conversion, cleaner operations, or a new digital product your customers can use.',
+    descriptionHe: 'כל פרויקט מחובר לתוצאה פרקטית: פחות עבודה ידנית, תגובה מהירה יותר ללידים, יותר המרות, תפעול מסודר יותר או מוצר דיגיטלי שלקוחות באמת משתמשים בו.',
     featuresEn: [
-      'Increased revenue and efficiency',
-      'Automated workflows save time',
-      'Scale without adding headcount',
-      'Data-driven decisions'
+      'Manual work reduced',
+      'Leads handled faster',
+      'Campaign pages built to convert',
+      'Dashboards make work visible'
     ],
     featuresHe: [
-      'הכנסות ויעילות מוגברות',
-      'תהליכים אוטומטיים חוסכים זמן',
-      'צמחו בלי להגדיל צוות',
-      'החלטות מבוססות נתונים'
+      'פחות שעות עבודה ידנית',
+      'טיפול מהיר יותר בלידים',
+      'דפי קמפיין שמכוונים להמרה',
+      'דשבורדים שעושים סדר בנתונים'
     ]
   },
   {
@@ -57,23 +57,23 @@ const reasons = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
       </svg>
     ),
-    titleEn: 'Peace of Mind',
-    titleHe: 'שקט נפשי',
-    subtitleEn: 'Sleep Well at Night',
-    subtitleHe: 'לישון בשקט בלילה',
-    descriptionEn: 'Your product just works. No crashes, no security breaches, no surprises. You get ongoing support, regular updates, and the confidence that your business runs on a solid foundation.',
-    descriptionHe: 'המוצר שלכם פשוט עובד. בלי קריסות, בלי פרצות אבטחה, בלי הפתעות. אתם מקבלים תמיכה שוטפת, עדכונים קבועים, והביטחון שהעסק שלכם רץ על בסיס יציב.',
+    titleEn: 'Reliable AI',
+    titleHe: 'AI שאפשר לסמוך עליו',
+    subtitleEn: 'Built With Guardrails and Ownership',
+    subtitleHe: 'עם בקרה, גבולות ואחריות טכנולוגית',
+    descriptionEn: 'AI systems need more than prompts. We build with clear data flow, fallback paths, human review where needed, analytics, and maintainable code.',
+    descriptionHe: 'מערכות AI צריכות יותר מפרומפט טוב. אנחנו בונים זרימת מידע מסודרת, מנגנוני גיבוי כשצריך, בקרה אנושית במקומות רגישים, אנליטיקה וקוד שאפשר להמשיך לשפר.',
     featuresEn: [
-      'Reliable and stable',
-      'Secure from day one',
-      'Ongoing support and maintenance',
-      'Scales as you grow'
+      'Guardrails for AI behavior',
+      'Human handoff when needed',
+      'Clean integrations and APIs',
+      'Support after launch'
     ],
     featuresHe: [
-      'אמין ויציב',
-      'מאובטח מהיום הראשון',
-      'תמיכה ותחזוקה שוטפת',
-      'גדל איתכם'
+      'גבולות ברורים להתנהגות המערכת',
+      'מעבר לנציג אנושי כשצריך',
+      'אינטגרציות API מסודרות',
+      'תמיכה לאחר ההשקה'
     ]
   }
 ];
@@ -84,15 +84,15 @@ export default function JumindWhy() {
   const content = {
     en: {
       badge: 'Why Choose Ju-Mind',
-      title1: 'Built on Three',
-      title2: 'Core Principles',
-      description: 'We combine speed, intelligence, and quality to deliver exceptional results',
+      title1: 'AI Implementation',
+      title2: 'That Makes Business Sense',
+      description: 'We combine automation thinking, product design, full-stack engineering, and practical AI to build systems that are useful from day one.',
     },
     he: {
       badge: 'למה לבחור ב-Ju-Mind',
-      title1: 'שלושה עקרונות',
-      title2: 'שמובילים אותנו',
-      description: 'אנחנו מאמינים בשילוב של מהירות, אינטליגנציה ואיכות ללא פשרות - זה מה שמאפשר לנו לספק תוצאות יוצאות דופן',
+      title1: 'מערכות AI',
+      title2: 'שמניבות תוצאות',
+      description: 'אנחנו משלבים חשיבה עסקית, אוטומציה, עיצוב מוצר, פיתוח פול-סטאק ו-AI פרקטי כדי לבנות מערכות שנותנות ערך כבר מהגרסה הראשונה.',
     },
   };
 
@@ -162,4 +162,3 @@ export default function JumindWhy() {
     </section>
   );
 }
-

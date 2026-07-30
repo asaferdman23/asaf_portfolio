@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import HeroSpline from '../components/jumind/HeroSpline';
 import ServicesPremium from '../components/jumind/ServicesPremium';
+import JumindProcess from '../components/jumind/JumindProcess';
 import JumindProjectsHorizontal from '../components/jumind/JumindProjectsHorizontal';
 import JumindWhy from '../components/jumind/JumindWhy';
 import JumindFounder from '../components/jumind/JumindFounder';
+import JumindFAQ from '../components/jumind/JumindFAQ';
 import JumindContact from '../components/jumind/JumindContact';
 import JumindFooter from '../components/jumind/JumindFooter';
 
@@ -19,9 +21,11 @@ export default function Jumind() {
       <div className="relative">
         <HeroSpline />
         <ServicesPremium />
+        <JumindProcess />
         <JumindProjectsHorizontal />
         <JumindWhy />
         <JumindFounder />
+        <JumindFAQ />
         <JumindContact />
         <JumindFooter />
       </div>

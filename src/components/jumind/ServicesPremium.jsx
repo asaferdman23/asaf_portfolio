@@ -7,45 +7,45 @@ import { animateSectionEntry, staggerCards, createHoverGlow, createCardTilt } fr
 const services = [
   {
     icon: '🌐',
-    titleEn: 'Web Applications',
-    titleHe: 'אפליקציות ווב',
-    descriptionEn: 'Lightning-fast, scalable web apps built with React, Node.js, and cutting-edge frameworks. From MVP to enterprise-grade SaaS platforms.',
-    descriptionHe: 'אפליקציות ווב מהירות ומדרגיות עם React, Node.js וטכנולוגיות מתקדמות. מ-MVP ועד פלטפורמות SaaS ארגוניות.',
+    titleEn: 'Landing Pages That Convert',
+    titleHe: 'דפי נחיתה שמייצרים לידים',
+    descriptionEn: 'Fast, focused landing pages for campaigns, products, and service offers. Clear positioning, strong CTAs, tracking, and lead capture.',
+    descriptionHe: 'דפי נחיתה מהירים ומדויקים לקמפיינים, מוצרים ושירותים. מסר חד, הנעה לפעולה, מדידה מסודרת ואיסוף לידים.',
   },
   {
     icon: '📱',
-    titleEn: 'Mobile Apps',
-    titleHe: 'אפליקציות מובייל',
-    descriptionEn: 'Native iOS & Android or cross-platform with React Native. Beautiful, performant mobile experiences that users love.',
-    descriptionHe: 'אפליקציות iOS ו-Android נייטיביות או חוצות-פלטפורמות עם React Native. חוויות מובייל יפות ומהירות שמשתמשים אוהבים.',
+    titleEn: 'Custom Web & Mobile Apps',
+    titleHe: 'אפליקציות ווב ומובייל מותאמות',
+    descriptionEn: 'Custom products, MVPs, SaaS platforms, client portals, and mobile experiences built around the exact workflow your business needs.',
+    descriptionHe: 'מוצרי MVP, פלטפורמות SaaS, פורטלים ללקוחות וחוויות מובייל שנבנים סביב הצורך והתהליך האמיתי של העסק.',
   },
   {
     icon: '🤖',
     titleEn: 'AI Agents',
-    titleHe: 'סוכני AI',
-    descriptionEn: 'Intelligent AI agents that automate workflows, handle customer interactions, and make data-driven decisions 24/7.',
-    descriptionHe: 'סוכני AI חכמים שמבצעים אוטומציה של תהליכים, מטפלים בלקוחות ומקבלים החלטות מבוססות נתונים 24/7.',
+    titleHe: 'סוכני AI לעסק',
+    descriptionEn: 'Custom agents for sales, support, onboarding, research, and internal operations. Built with guardrails, memory, tools, and human handoff.',
+    descriptionHe: 'סוכני AI למכירות, תמיכה, קליטת לקוחות, מחקר ותפעול פנימי. עם כלים, זיכרון, גבולות ברורים והעברה לנציג אנושי כשצריך.',
   },
   {
     icon: '⚡',
-    titleEn: 'Automation',
-    titleHe: 'אוטומציה',
-    descriptionEn: 'Streamline operations with Make, Zapier, and custom API integrations. Connect your tools and eliminate repetitive work.',
-    descriptionHe: 'ייעול תהליכים עם Make, Zapier ואינטגרציות API מותאמות אישית. חיבור בין הכלים שלכם וביטול עבודה חוזרת.',
+    titleEn: 'AI Automation Sprints',
+    titleHe: 'אוטומציות AI',
+    descriptionEn: 'We map one expensive manual workflow and ship a working automation with Make, Zapier, custom APIs, CRM updates, alerts, and reporting.',
+    descriptionHe: 'ממפים תהליך ידני שגוזל זמן ובונים אוטומציה שעובדת בפועל עם Make, Zapier, חיבורי API, עדכוני CRM, התראות ודוחות.',
   },
   {
     icon: '📊',
-    titleEn: 'Analytics Dashboards',
-    titleHe: 'דשבורדים',
-    descriptionEn: 'Real-time dashboards and data visualization. Transform complex data into clear, actionable business insights.',
-    descriptionHe: 'דשבורדים בזמן אמת וויזואליזציה של נתונים. הפיכת נתונים מורכבים לתובנות עסקיות ברורות.',
+    titleEn: 'Internal Tools & Dashboards',
+    titleHe: 'כלים פנימיים ודשבורדים',
+    descriptionEn: 'Operational dashboards, admin panels, lead systems, analytics views, and internal portals that give teams one reliable source of truth.',
+    descriptionHe: 'דשבורדים תפעוליים, מערכות ניהול, מערכות לידים, אנליטיקות ופורטלים פנימיים שנותנים לצוות מקור מידע אחד וברור.',
   },
   {
     icon: '🛠️',
-    titleEn: 'Custom Solutions',
-    titleHe: 'פתרונות מותאמים',
-    descriptionEn: 'Bespoke enterprise solutions, CRM systems, and specialized tools built precisely for your unique needs.',
-    descriptionHe: 'פתרונות ארגוניים ייחודיים, מערכות CRM וכלים מתמחים שנבנים בדיוק לפי הצרכים הייחודיים שלכם.',
+    titleEn: 'AI Full-Stack Systems',
+    titleHe: 'מערכות AI מקצה לקצה',
+    descriptionEn: 'Production-ready AI apps with frontend, backend, database, auth, payments, model integrations, and admin dashboards.',
+    descriptionHe: 'אפליקציות AI מוכנות לפרודקשן עם ממשק משתמש, שרת, דאטהבייס, הרשאות, תשלומים, חיבורי מודלים ודשבורדי ניהול.',
   },
 ];
 
@@ -59,16 +59,14 @@ export default function ServicesPremium() {
 
   const content = {
     en: {
-      badge: 'WHAT WE BUILD',
-      title: 'Complete Technology Solutions',
-      subtitle: 'From Concept to Launch',
-      description: 'We deliver full-stack solutions that drive real business results. Our expertise spans web, mobile, AI, and automation.',
+      badge: 'WHAT WE IMPLEMENT',
+      title: 'AI Agency Services',
+      description: 'We turn your freelance-proven capabilities into practical offers: automations, AI agents, conversion landing pages, and full-stack AI systems that solve real operational problems.',
     },
     he: {
       badge: 'מה אנחנו בונים',
-      title: 'פתרונות טכנולוגיים מלאים',
-      subtitle: 'מרעיון להשקה',
-      description: 'אנחנו מספקים פתרונות מלאים שמניעים תוצאות עסקיות אמיתיות. המומחיות שלנו משתרעת על ווב, מובייל, AI ואוטומציה.',
+      title: 'שירותי AI לעסקים',
+      description: 'אנחנו הופכים ניסיון מעשי באוטומציות, סוכני AI, דפי נחיתה ומערכות פול-סטאק לפתרונות שעוזרים לעסק לחסוך זמן, לטפל ביותר לידים ולעבוד חכם יותר.',
     },
   };
 
@@ -136,19 +134,6 @@ export default function ServicesPremium() {
             {t.title}
           </h2>
 
-          {/* Subtitle with Gradient */}
-          <p
-            className="text-2xl md:text-3xl font-bold mb-6"
-            style={{
-              background: theme.colors.electric.gradient,
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            {t.subtitle}
-          </p>
-
           {/* Description */}
           <p
             className="text-lg md:text-xl max-w-3xl mx-auto"
@@ -215,8 +200,8 @@ export default function ServicesPremium() {
             style={{ color: theme.colors.gray[300] }}
           >
             {language === 'he'
-              ? 'לא מצאתם בדיוק מה שחיפשתם? אנחנו מתמחים בפיתוח פתרונות ייחודיים.'
-              : 'Don\'t see what you need? We specialize in custom solutions for unique challenges.'}
+              ? 'לא בטוחים איפה AI יכול לחסוך לכם זמן או כסף? נתחיל באבחון קצר ונמצא את התהליך שבו הערך העסקי הכי ברור.'
+              : 'Not sure where AI can save time or money? We start with a short audit and find the workflow with the clearest return.'}
           </p>
           <a
             href="#contact"
@@ -227,11 +212,10 @@ export default function ServicesPremium() {
               boxShadow: theme.effects.glow.medium,
             }}
           >
-            {language === 'he' ? 'בואו נדבר' : 'Let\'s Talk'}
+            {language === 'he' ? 'קבעו שיחה' : 'Book an AI Audit'}
           </a>
         </div>
       </div>
     </section>
   );
 }
-

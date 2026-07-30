@@ -16,25 +16,25 @@ export default function HeroSpline() {
   const headlineRef = useRef(null);
   const subheadlineRef = useRef(null);
   const descriptionRef = useRef(null);
-  // const buttonsRef = useRef(null);
+  const buttonsRef = useRef(null);
   const splineContainerRef = useRef(null);
 
   const content = {
     en: {
-      badge: 'AI-POWERED STUDIO',
-      headline: 'Building The Future of Digital Products',
-      subheadline: 'Transform Your Vision Into Reality',
-      description: 'We create intelligent web applications, mobile experiences, and AI-powered systems that drive exponential business growth.',
-      ctaPrimary: 'Start Your Project',
-      ctaSecondary: 'Explore Our Work',
+      badge: 'AI IMPLEMENTATION AGENCY',
+      headline: 'AI Systems That Replace Manual Work',
+      subheadline: 'Automation, agents, landing pages, and full-stack AI products',
+      description: 'Ju-Mind helps businesses turn repetitive operations into reliable AI-powered systems: lead handling, customer support, internal tools, dashboards, and revenue-focused web experiences.',
+      ctaPrimary: 'Book an AI Audit',
+      ctaSecondary: 'See Live Systems',
     },
     he: {
-      badge: 'סטודיו מבוסס AI',
-      headline: 'בונים את העתיד של מוצרים דיגיטליים',
-      subheadline: 'הופכים את החזון שלכם למציאות',
-      description: 'אנחנו יוצרים אפליקציות ווב חכמות, חוויות מובייל ומערכות מבוססות AI שמניעות צמיחה עסקית משמעותית.',
-      ctaPrimary: 'התחילו פרויקט',
-      ctaSecondary: 'צפו בעבודות',
+      badge: 'סוכנות AI ליישום מערכות חכמות',
+      headline: 'מערכות AI שמחליפות תהליכים ידניים',
+      subheadline: 'אוטומציות, סוכני AI, דפי נחיתה ומערכות AI מקצה לקצה',
+      description: 'ב-Ju-Mind אנחנו בונים לעסקים מערכות AI , כלים פנימיים, דשבורדים וחוויות ווב שמייצרות יותר פניות והכנסות.',
+      ctaPrimary: 'קבעו שיחה',
+      ctaSecondary: 'צפו במערכות חיות',
     },
   };
 
@@ -62,13 +62,13 @@ export default function HeroSpline() {
         opacity: 0,
         duration: 0.8,
       }, 0.9)
-      // .from(buttonsRef.current.children, {
-      //   y: 30,
-      //   opacity: 0,
-      //   scale: 0.9,
-      //   duration: 0.6,
-      //   stagger: 0.15,
-      // }, 1.2)
+      .from(buttonsRef.current.children, {
+        y: 30,
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.6,
+        stagger: 0.15,
+      }, 1.2)
       .from(splineContainerRef.current, {
         scale: 0.8,
         opacity: 0,
@@ -112,7 +112,7 @@ export default function HeroSpline() {
       />
 
       <div className="container-jumind relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-20 lg:py-32 pb-24 md:pb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen py-28 lg:py-32">
           
           {/* LEFT: Content */}
           <div
@@ -155,7 +155,7 @@ export default function HeroSpline() {
             </p>
 
             {/* CTA Buttons */}
-            {/* <div
+            <div
               ref={buttonsRef}
               className={`flex flex-col sm:flex-row gap-4 ${language === 'he' ? 'sm:justify-end' : ''}`}
             >
@@ -192,7 +192,7 @@ export default function HeroSpline() {
                   </svg>
                 </span>
               </a>
-            </div> */}
+            </div>
           </div>
 
           {/* RIGHT: Spline 3D Scene */}
@@ -254,4 +254,3 @@ export default function HeroSpline() {
     </section>
   );
 }
-
